@@ -153,6 +153,11 @@ svg {
 
 .projects--content {
   text-align: center;
+  justify-content: space-around;
+  height: 60vh;
+  width: 100vw;
+  display: flex;
+
 }
 .projects--content h2 {
   padding: 1.5em;
@@ -162,63 +167,134 @@ svg {
   list-style: none;
   line-height: 2em;
 }
-.project-grid {
-  width: 70vw;
-  display: inline-block;
+.column-one, .column-two, .column-three {
+  float: left;
+  align-items: flex-end;
+  justify-content: space-between;
 }
-.round {
-  background: black;
-  width: 125px;
-  height: 125px;
-  font-size: 200px;
-  border-radius: 50%;
+/*.column-two {
+  float: left;
+}
+.column-three {
+  float: left;
+}*/
+.falling {
+  position: relative;
+  top: 20px;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 100%;
+  background-color: gray;
+  -webkit-radius: 100%;
+}
+/*.round {
+  background: white;
+  border-radius: 100%;
   border: none;
+  margin: 10px;
   transition: 0.5s all;
   float: left;
-  margin: 5px;
   transition-timing-function: ease-out;
   -webkit-transition-timing-function: ease-out;
 }
 .round:nth-child(odd) {
   background: lightGray;
+  margin-left: -30px;
+}
+.round:nth-child(even) {
+  margin-right: 60px;
 }
 .round.active {
-  transform: scale(2, 2);
-  -ms-transform: scale(2, 2);
-  -webkit-transform: scale(2, 2);
-}
+  transform: scale(1.5, 1.5);
+  -ms-transform: scale(1.5, 1.5);
+  -webkit-transform: scale(1.5, 1.5);
+}*/
+
 .etsy, .hot-cold, .karma, .ncaa, .shopper, .street-fighter, .twitter-clone, .todo-list, .portfolio-one {
-  width: 125px;
-  height: 125px;
+  width: 100px;
+  height: 100px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  -moz-border-radius: 75px;
-  -webkit-border-radius: 75px;
-  border-radius: 75px;
-  margin: auto;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  /*margin: 2em;*/
 }
 .etsy {
   background-image: url(../images/EtsyHack.png);
+  -webkit-animation: drop 1.4s;
+  /* Chrome, Safari, Opera */
+  animation: drop 1.4s;
 }
 .hot-cold {
   background-image: url(../images/HotCold.jpg);
+  -webkit-animation: drop 1.2s;
+  /* Chrome, Safari, Opera */
+  animation: drop 1.2s;
 }
 .karma {
   background-image: url(../images/Karma.png);
+  -webkit-animation: drop 1.7s;
+  /* Chrome, Safari, Opera */
+  animation: drop 1.7s;
 }
 .ncaa {
   background-image: url(../images/NCAA-quiz.jpg);
+  -webkit-animation: drop 1.4s;
+  /* Chrome, Safari, Opera */
+  animation: drop 1.4s;
 }
 .shopper {
   background-image: url(../images/SmartShopper.jpg);
+  -webkit-animation: drop 1.7s;
+  /* Chrome, Safari, Opera */
+  animation: drop 1.7s;
 }
 .street-fighter {
   background-image: url(../images/streetFighter.jpg);
+  -webkit-animation: drop 1.2s;
+  /* Chrome, Safari, Opera */
+  animation: drop 1.2s;
 }
-.twitter-clone {}
-.todo-list {}
-.portfolio-one {}
+.twitter-clone {
+  -webkit-animation: drop 1.2s;
+  /* Chrome, Safari, Opera */
+  animation: drop 1.2s;
+}
+.todo-list {
+  -webkit-animation: drop 1.4s;
+  /* Chrome, Safari, Opera */
+  animation: drop 1.4s;
+}
+.portfolio-one {
+  background-image: url(../images/nerdwax.png);
+  -webkit-animation: drop 1.7s;
+  /* Chrome, Safari, Opera */
+  animation: drop 1.7s;
+}
+/* Chrome, Safari, Opera */
+
+@-webkit-keyframes drop {
+  from {
+    top: -100px
+  }
+  to {
+    top: 20px;
+  }
+}
+
+/* Standard syntax */
+
+@keyframes drop {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 20px;
+  }
+}
 
 /*-----------------------------------
          skillset
@@ -339,7 +415,7 @@ svg {
   -o-animation: grow 1s ease-out backwards;
   animation: grow 1s ease-out backwards;
 }
-.rowOne-container {
+.rowOne-container, #bio {
   -webkit-animation: fade_in 1s ease-out backwards;
   -moz-animation: fade_in 1s ease-out backwards;
   -o-animation: fade_in 1s ease-out backwards;
@@ -498,7 +574,7 @@ svg {
             footer
 ------------------------------------- */
 
-footer {
+footer, .footer {
   padding: 0;
   margin: -4px 0 0 0;
   border-top: #f2f2f2 1px solid;
