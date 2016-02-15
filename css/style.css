@@ -152,11 +152,7 @@ svg {
 ------------------------------------- */
 
 .projects--content {
-  text-align: center;
-  justify-content: space-around;
-  height: 60vh;
-  width: 100vw;
-  display: flex;
+
 
 }
 .projects--content h2 {
@@ -167,20 +163,10 @@ svg {
   list-style: none;
   line-height: 2em;
 }
-.column-one, .column-two, .column-three {
-  float: left;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-/*.column-two {
-  float: left;
-}
-.column-three {
-  float: left;
-}*/
+
 .falling {
   position: relative;
-  top: 20px;
+  top: 45px;
   width: 100px;
   height: 100px;
   margin: auto;
@@ -188,114 +174,47 @@ svg {
   background-color: gray;
   -webkit-radius: 100%;
 }
-/*.round {
-  background: white;
-  border-radius: 100%;
-  border: none;
-  margin: 10px;
-  transition: 0.5s all;
-  float: left;
-  transition-timing-function: ease-out;
-  -webkit-transition-timing-function: ease-out;
+.columnOne-container,
+.columnTwo-container,
+.columnThree-container{
+  width: 90vw;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: row;
+  text-align: center;
+  margin: 1em;
 }
-.round:nth-child(odd) {
-  background: lightGray;
-  margin-left: -30px;
-}
-.round:nth-child(even) {
-  margin-right: 60px;
-}
-.round.active {
-  transform: scale(1.5, 1.5);
-  -ms-transform: scale(1.5, 1.5);
-  -webkit-transform: scale(1.5, 1.5);
-}*/
 
-.etsy, .hot-cold, .karma, .ncaa, .shopper, .street-fighter, .twitter-clone, .todo-list, .portfolio-one {
-  width: 100px;
-  height: 100px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
-  /*margin: 2em;*/
-}
-.etsy {
-  background-image: url(../images/EtsyHack.png);
+.etsy, .ncaa, .todo-list  {
   -webkit-animation: drop 1.4s;
-  /* Chrome, Safari, Opera */
   animation: drop 1.4s;
 }
-.hot-cold {
-  background-image: url(../images/HotCold.jpg);
+.hot-cold, .street-fighter, .twitter-clone  {
   -webkit-animation: drop 1.2s;
-  /* Chrome, Safari, Opera */
   animation: drop 1.2s;
 }
-.karma {
-  background-image: url(../images/Karma.png);
+.karma, .shopper, .portfolio-one   {
   -webkit-animation: drop 1.7s;
-  /* Chrome, Safari, Opera */
   animation: drop 1.7s;
 }
-.ncaa {
-  background-image: url(../images/NCAA-quiz.jpg);
-  -webkit-animation: drop 1.4s;
-  /* Chrome, Safari, Opera */
-  animation: drop 1.4s;
-}
-.shopper {
-  background-image: url(../images/SmartShopper.jpg);
-  -webkit-animation: drop 1.7s;
-  /* Chrome, Safari, Opera */
-  animation: drop 1.7s;
-}
-.street-fighter {
-  background-image: url(../images/streetFighter.jpg);
-  -webkit-animation: drop 1.2s;
-  /* Chrome, Safari, Opera */
-  animation: drop 1.2s;
-}
-.twitter-clone {
-  -webkit-animation: drop 1.2s;
-  /* Chrome, Safari, Opera */
-  animation: drop 1.2s;
-}
-.todo-list {
-  -webkit-animation: drop 1.4s;
-  /* Chrome, Safari, Opera */
-  animation: drop 1.4s;
-}
-.portfolio-one {
-  background-image: url(../images/nerdwax.png);
-  -webkit-animation: drop 1.7s;
-  /* Chrome, Safari, Opera */
-  animation: drop 1.7s;
-}
-/* Chrome, Safari, Opera */
-
 @-webkit-keyframes drop {
   from {
     top: -100px
   }
   to {
-    top: 20px;
+    top: 45px;
   }
 }
-
-/* Standard syntax */
-
 @keyframes drop {
   from {
     top: -100px;
   }
   to {
-    top: 20px;
+    top: 45px;
   }
 }
-
 /*-----------------------------------
          skillset
  ------------------------------------- */
