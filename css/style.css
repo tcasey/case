@@ -203,7 +203,8 @@ a img {
   -o-transition: all 1s ease;
   transition: all 1s ease;
 }
-#screen-background:hover {
+#screen-background:hover, #screen-background:focus,
+#screen-background:active {
   cursor: pointer;
   opacity: 1;
   -webkit-transition: all ease 1s;
