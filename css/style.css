@@ -14,11 +14,11 @@ body, html {
   background-color: #fff;
   font-family: "Quicksand", sans-serif
 }
-h1 a {
+/*h1 a {
   font-family: "ailerons";
   letter-spacing: 4px;
   font-size: 1.3em;
-}
+}*/
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
