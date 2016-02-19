@@ -1,8 +1,13 @@
 $( document ).ready(function() {
+//toggles :hover for touch devices
 	$('#screen-background').bind('touchstart touchend', function(e) {
          e.preventDefault();
          $(this).toggleClass('hover_effect');
      });
+		 $('.hover').bind('touchstart touchend', function(e) {
+	          e.preventDefault();
+	          $(this).toggleClass('hover_effect');
+	      });
 	// $('#imac').hover(function(){
 	//         $(this).find('img').fadeTo(500, 0.5);
 	// 	}, function(){
