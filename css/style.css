@@ -14,10 +14,11 @@ body, html {
   background-color: #fff;
   font-family: "Quicksand", sans-serif
 }
-/*h1 a {
+h1 a {
   font-family: "ailerons";
-  letter-spacing: 2px;
-}*/
+  letter-spacing: 4px;
+  font-size: 1.3em;
+}
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -30,7 +31,8 @@ a {
 a:visited {
   color: #0084FE
 }
-a:hover, a:focus, a:active {
+a:hover, a:focus, a:active,
+a.hover_effect {
   color: #0069cb
 }
 a img {
@@ -93,7 +95,7 @@ a img {
   text-decoration: none;
   color: gray;
 }
-.header a:hover, .nav--main a:hover {
+.header a:hover, .nav--main a:hover, .header a.hover_effect, .nav--main.hover_effect {
   color: #0084FE;
 }
 .header h1 small {
@@ -203,8 +205,10 @@ a img {
   -o-transition: all 1s ease;
   transition: all 1s ease;
 }
-#screen-background:hover, #screen-background:focus,
-#screen-background:active {
+#screen-background:hover,
+#screen-background:active, #screen-background:focus,
+#screen-background.hover_effect
+ {
   cursor: pointer;
   opacity: 1;
   -webkit-transition: all ease 1s;
@@ -337,7 +341,8 @@ a img {
   -webkit-transition-property: transform, opacity;
   transition-property: transform, opacity;
 }
-.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active,
+.hvr-float-shadow.hover_effect {
   -webkit-transform: translateY(-4px);
   transform: translateY(-4px);
   /* move the element up by 5px */
@@ -542,7 +547,8 @@ footer, .footer {
 .social-media-list svg {
   fill: #000;
 }
-.social-media-list svg:hover, .social-media-list svg:active, .social-media-list svg:focus {
+.social-media-list svg:hover, .social-media-list svg:active, .social-media-list svg:focus,
+.social-media-list svg.hover_effect {
   fill: #0084FE;
 }
 .social-media-list span {

@@ -1,5 +1,8 @@
 $( document ).ready(function() {
-
+	$('.hover').bind('touchstart touchend', function(e) {
+         e.preventDefault();
+         $(this).toggleClass('hover_effect');
+     });
 	// $('#imac').hover(function(){
 	//         $(this).find('img').fadeTo(500, 0.5);
 	// 	}, function(){
@@ -12,6 +15,6 @@ $( document ).ready(function() {
 	//         }).mouseout(function(){
 	//         $("#screen-background").stop().animate({width: 280, height: 187}, 200 );
 	//     });
-alert('sup');
+
 
 });
