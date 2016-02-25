@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="myApp" lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Trevor Casey | Frontend Developer |</title>
   <meta name="description" content="Personal portfolio page for Trevor Casey">
@@ -15,47 +15,51 @@
 
 </head>
 
-<body>
+<body ng-controller="mainCtrl">
 
   <nav>
     <ul class="nav--main">
 
+      <div id="menu-wrapper">
 
+  <div id="icon-wrap-2" class="icon-wrap">
+    <svg width="70" height="50" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    viewBox="0 524.5 2000 2000.5" enable-background="new 0 524.5 2000 2000.5" xml:space="preserve">
+      <circle cx="1000" cy="1530" r="660" stroke="none" fill="red" />
 
-      <li class="page-link">
-        <a href="bio.html">Bio</a>
+      <path class="x2" fill="none" stroke="#ED1C24" stroke-miterlimit="10" d="M1410.5,1235.2H589.3"/>
+
+      <path class="x2" fill="none" stroke="#ED1C24" stroke-miterlimit="10" d="M1410.5,1815H589.3"/>
+
+      <path class="yy" fill="none" stroke="#ED1C24" stroke-miterlimit="10" d="M1410.5,1524.7c0,0-821.2,0-821.2,0c-211.3,0-260,98-218.2,217.6
+        l0,0.1c90.1,260.7,337.6,447.9,628.9,447.9c367.4,0,665.2-297.8,665.2-665.2c0-79-13.8-154.8-39.1-225.2"/>
+
+      <path class="yy" fill="none" stroke="#ED1C24" stroke-miterlimit="10" d="M589.3,1524.7c0,0,821.2,0,821.2,0c211.3,0,260-98,218.2-217.6l0-0.1
+        c-90.1-260.7-337.6-447.9-628.9-447.9c-367.4,0-665.2,297.8-665.2,665.2c0,79,13.8,154.8,39.1,225.2"/>
+    </svg>
+  </div>
+</div>
+
+      <li id="bio-page" class="page-link menu">
+        <a ui-sref="bio">Bio</a>
       </li>
 
-      <li class="page-link">
-        <a href="projects.html">Projects</a>
+      <li id="projects-page" class="page-link menu">
+        <a ui-sref="projects">Projects</a>
       </li>
 
-      <li class="page-link">
-        <a href="skillset.html">Skills</a>
+      <li id="skillset-page" class="page-link menu">
+        <a ui-sref="skills">Skills</a>
       </li>
 
     </ul>
   </nav>
-  <section id="name" class="header">
-    <h1>
-    <a href="index.html" class="hvr-float-shadow">Trevor Casey</a><br><small>Frontend Developer</small>
-  </h1>
-  </section>
 
 
-  <div class="content--primary">
-    <div id="home" class="home">
-      <div class="home--image">
-        <img src="images/profile-pic.jpg" class="img-responsive" alt="Trevor Casey" />
-      </div>
-      <div class="home--content">
-        <h1>Frontend Developer</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-    </div>
 
-  </div>
+<ui-view class="ui-stuff"></ui-view>
+
+
   <footer>
     <ul class="social-media-list">
       <li>
@@ -96,8 +100,19 @@
     </ul>
   </footer>
 
+
+  <script type="text/javascript" src="https://code.angularjs.org/1.5.0/angular.js"></script>
+   <!-- <script type- "text/javascript" src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+   <script type="text/javascript" src="https://cdn.firebase.com/libs/angularfire/1.1.4/angularfire.js"></script> -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-  <script src="js/script.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/mainCtrl.js"></script>
+  <script src="js/homeCtrl.js"></script>
+  <script src="js/bioCtrl.js"></script>
+  <script src="js/projectsCtrl.js"></script>
+  <script src="js/skillsCtrl.js"></script>
 </body>
 
 </html>
