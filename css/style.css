@@ -262,9 +262,6 @@ a img {
   list-style: none;
   line-height: 2em;
 }
-
-
-
 #hexGrid {
     overflow: hidden;
     width: 80vw;
@@ -274,12 +271,6 @@ a img {
     font-size: 0.8em;
 
 }
-/*#hexGrid:after {
-    content: "";
-    display: block;
-    clear: both;
-}*/
-
 .hex {
     position: relative;
     list-style-type: none;
@@ -287,6 +278,8 @@ a img {
     overflow: hidden;
     visibility: hidden;
     outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+    transition-delay: 0.2s;
+
     -webkit-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
         -ms-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
             transform: rotate(-60deg) skewY(30deg) translatez(-1px);
@@ -305,7 +298,7 @@ a img {
     overflow: hidden;
     -webkit-transform: skewY(-30deg) rotate(60deg);
         -ms-transform: skewY(-30deg) rotate(60deg);
-            /*transform: skewY(-30deg) rotate(60deg);*/
+            transform: skewY(-30deg) rotate(60deg);
 }
 
 /*-----------------------------------
@@ -319,9 +312,53 @@ a img {
     height: 100%;
     margin: 0 auto;
 }
-
 /*-----------------------------------
-        hover effects
+        hex fade in animations
+------------------------------------- */
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:0.6s;
+  -moz-animation-duration:0.6s;
+  animation-duration:0.6s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay:0.4s;
+  animation-delay: 0.4s;
+}
+
+.fade-in.three {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.fade-in.four {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+/*-----------------------------------
+        hex hover effects
 ------------------------------------- */
 
 #hexGrid .hover-box {

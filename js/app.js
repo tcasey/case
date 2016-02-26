@@ -29,9 +29,6 @@ angular.module('myApp', ['ui.router'])
 		$locationProvider.html5Mode(true);
 });
 
-
-
-
 $('#icon-wrap-2').click(function(){
   if ($(this).hasClass('toClose')){
     $(this).removeClass('toClose').addClass('toOpen');
