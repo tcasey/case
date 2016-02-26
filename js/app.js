@@ -27,6 +27,9 @@ angular.module('myApp', ['ui.router'])
 
 	$urlRouterProvider
 		.otherwise('home');
+
+		$noHash.html5Mode(true);
+		
 });
 
 $('#icon-wrap-2').click(function(){
