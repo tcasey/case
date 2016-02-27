@@ -224,7 +224,7 @@ h1 small {
   }
 }
 
-@media (min-width: 600px) {
+/*@media (min-width: 600px) {
     #menu-wrapper {
       display: none;
     }
@@ -235,7 +235,7 @@ h1 small {
   #skillset-page {
     display: none;
   }
-}
+}*/
 /*-----------------------------------
         home
 ------------------------------------- */
