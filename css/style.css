@@ -1,6 +1,7 @@
 /*-----------------------------------
             setup/links
 ------------------------------------- */
+@import url(https://fonts.googleapis.com/css?family=Gruppo|Expletus+Sans|Quicksand:400,300|Lato:100,300);
 
 a, .social-media-list svg {
   transition: all 0.2s ease-in-out
@@ -43,6 +44,13 @@ a img {
 /*----------------------------
           nav/header
 ------------------------------ */
+.header h1 {
+  font-family: 'Expletus Sans';
+  letter-spacing: 5px;
+}
+h1 small {
+  font-family: 'Quicksand';
+}
 
 .header, .nav--main, footer, .social-media-list, .pagination {
   display: -moz-box;
