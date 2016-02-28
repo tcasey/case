@@ -240,7 +240,7 @@ h1 small {
         home
 ------------------------------------- */
 #home {
-  height: 78vh;
+  height: 100vh;
 }
 
 /*-----------------------------------
@@ -249,7 +249,7 @@ h1 small {
 
 .bio--content {
   max-width: 620px;
-  height: 80vh;
+  /*height: 100vh;*/
   margin: 0 auto;
   padding: 40px
 }
@@ -379,6 +379,7 @@ h1 small {
     letter-spacing: 4px;
     opacity: 0;
     padding: 2em;
+    overflow: hidden;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     -webkit-transition: opacity .2s ease-out, -webkit-transform .2s ease-in-out;
@@ -883,6 +884,9 @@ footer, .footer {
 ------------------------------------- */
 
 @media (min-width: 750px) {
+  #home, .bio--content {
+    height: 78vh;
+  }
   .home {
     display: -moz-box;
     display: -ms-flexbox;
