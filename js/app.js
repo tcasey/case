@@ -1,3 +1,4 @@
+ /* @flow */
 angular.module('myApp', ['ui.router'])
 .config(function($urlRouterProvider, $stateProvider, $locationProvider){
 
@@ -27,12 +28,4 @@ angular.module('myApp', ['ui.router'])
 			// controller: 'skillsCtrl',
 	})
 		$locationProvider.html5Mode(true);
-});
-
-$('#icon-wrap-2').click(function(){
-  if ($(this).hasClass('toClose')){
-    $(this).removeClass('toClose').addClass('toOpen');
-  } else {
-    $(this).removeClass('toOpen').addClass('toClose');
-  }
 });
