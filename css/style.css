@@ -224,13 +224,13 @@ h1 small {
       display: none;
     }
 }
-@media (max-width: 600px){
+/*@media (max-width: 600px){
   #bio-page,
   #projects-page,
   #skillset-page {
     display: none;
   }
-}
+}*/
 /*-----------------------------------
         index
 ------------------------------------- */
@@ -241,9 +241,9 @@ h1 small {
 /*-----------------------------------
         home
 ------------------------------------- */
-#home {
+/*#home {
   height: 78vh;
-}
+}*/
 
 /*-----------------------------------
         bio
@@ -893,6 +893,9 @@ footer, .footer {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+  }
+  #home {
+    height: 78vh;
   }
   .home--image, .home--content {
     display: inline-block;
