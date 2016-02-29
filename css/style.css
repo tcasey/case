@@ -91,7 +91,8 @@ h1 small {
 .header h1 {
   width: 100%;
   font-weight: 400;
-  font-size: 2em;
+  font-size: 1.5em;
+  z-index: 1;
 }
 .header h1 a {
   text-decoration: none;
@@ -148,11 +149,6 @@ h1 small {
   -webkit-filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.2));
 }*/
 
-.menu-nav {
-  background-color: rgb(63, 65, 64);
-  z-index: 100;
-  border-radius: 20%;
-}
 #menu-wrapper .icon-wrap {
   display: flex;
   justify-content: flex-end;
@@ -223,32 +219,37 @@ h1 small {
     display: none;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 599px) {
   #bio-page a, #projects-page a, #skillset-page a {
     display: none;
   }
   .nav--main li {
     display: flex;
-    justify-content: flex-end;
-    width: 90px;
-    line-height: 1;
-    margin: 8px;
+    justify-content: center;
+    /*margin: 3px;*/
     font-size: 1em;
   }
 }
-#menu-wrapper .logo {
-  float: left;
-  font-size: 2em;
-  padding: 10px 20px;
-  text-decoration: none;
-}
 #menu-wrapper .menu-nav {
-  clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  z-index: 30;
+  position: relative;
+  display: none;
 }
-
+#menu-wrapper .menu-nav li {
+  font-size: 1em;
+  z-index: 100;
+  height: 2.5em;
+  width: 10em;
+  background: #f2f2f2;
+  border: 1px solid white;
 }
+#menu-wrapper .menu-nav li:hover{
+  background: rgba(157, 172, 201, 1);
+ }
 
 /*-----------------------------------
         index
@@ -257,7 +258,12 @@ h1 small {
 /*#index-section {
   height: 78vh;
 }*/
-
+/*-----------------------------------
+        ui routes
+------------------------------------- */
+  .ui-stuff {
+    z-index: -1;
+  }
 /*-----------------------------------
         home
 ------------------------------------- */
@@ -308,8 +314,6 @@ h1 small {
   overflow: hidden;
   visibility: hidden;
   outline: 1px solid transparent;
-  /* fix for jagged edges in FF on hover transition */
-
   transition-delay: 0.2s;
   -webkit-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
   -ms-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
@@ -319,7 +323,6 @@ h1 small {
   position: absolute;
   visibility: visible;
   outline: 1px solid transparent;
-  /* fix for jagged edges in FF on hover transition */
 }
 .hexIn {
   display: block;
@@ -348,7 +351,7 @@ h1 small {
         hex fade in animations
 ------------------------------------- */
 
-/* make keyframes that tell the start state and the end state of our object */
+/* keyframes that tell the start state and the end state of our object */
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -383,7 +386,7 @@ h1 small {
   -moz-animation: fadeIn ease-in 1;
   animation: fadeIn ease-in 1;
   -webkit-animation-fill-mode: forwards;
-  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  /* this makes sure that after animation is done it remains at the last keyframe value (opacity: 1)*/
 
   -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
@@ -402,14 +405,14 @@ h1 small {
   animation-delay: 0.4s;
 }
 .fade-in.three {
-  -webkit-animation-delay: 0.6s;
-  -moz-animation-delay: 0.6s;
-  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
 }
 .fade-in.four {
-  -webkit-animation-delay: 0.8s;
-  -moz-animation-delay: 0.8s;
-  animation-delay: 0.8s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 /*-----------------------------------
@@ -630,7 +633,7 @@ h1 small {
 /*-----------------------------------
             button
 ------------------------------------- */
-.button {
+/*.button {
   background-color: #f2f2f2;
   padding: 4px 8px;
   margin: 10px 0;
@@ -657,7 +660,7 @@ h1 small {
 .img-responsive {
   width: 100%;
   height: auto;
-}
+}*/
 
 /*-----------------------------------
             Float Shadow
@@ -717,7 +720,7 @@ h1 small {
   -o-animation: grow 1s ease-out backwards;
   animation: grow 1s ease-out backwards;
 }
-.rowOne-container, #bio {
+.rowOne-container {
   -webkit-animation: fade_in 1s ease-out backwards;
   -moz-animation: fade_in 1s ease-out backwards;
   -o-animation: fade_in 1s ease-out backwards;

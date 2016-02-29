@@ -10,4 +10,7 @@ angular.module('myApp')
     $('#icon-wrap-2').click(function() {
       $('menu-nav').show();
     })
+    $('#icon-wrap-2').on('click', function(){
+  $('.menu-nav').slideToggle(500);
+ });
   });
