@@ -1,12 +1,18 @@
+
 angular.module('myApp')
   .controller('mainCtrl', function($scope) {
-    $('#menu-wrapper').click(function(){
-      if ($(this).hasClass('toClose')){
-        $(this).removeClass('toClose').addClass('toOpen');
+    $('#icon-wrap-2').click(function(){
+      if ($('#icon-wrap-2').hasClass('toClose')){
+        $('#icon-wrap-2').removeClass('toClose').addClass('toOpen');
       } else {
-        $(this).removeClass('toOpen').addClass('toClose');
+        $('#icon-wrap-2').removeClass('toOpen').addClass('toClose');
       }
     });
+
+    $('.menu-nav').click(function() {
+      $('#icon-wrap-2').removeClass('toClose').addClass('toOpen');
+    })
+
     $('#menu-wrapper').click(function() {
       $('menu-nav').show();
     })

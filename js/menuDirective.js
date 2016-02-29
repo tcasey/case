@@ -1,4 +1,4 @@
-/* @flow */
+
 angular.module('myApp')
   .directive('tcMenu', function() {
     return {

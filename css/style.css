@@ -27,7 +27,7 @@ a {
 a:visited {
   color: #0084FE
 }
-a:hover, a:focus, a:active, a.hover_effect {
+a:hover, a:focus, a:active {
   color: #0069cb
 }
 a img {
@@ -233,6 +233,7 @@ h1 small {
 #menu-wrapper .menu-nav {
   padding-left: 0;
   margin: 0;
+  /*margin-top: 3.1em;*/
   list-style: none;
   text-align: center;
   z-index: 30;
