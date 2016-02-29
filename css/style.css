@@ -269,14 +269,16 @@ h1 small {
         home
 ------------------------------------- */
 
-/*#home {
-  height: 78vh;
-}*/
-
+@media (max-width: 475px ) {
+  .home--image img {
+    width: 90%;
+    height: 90%;
+  }
+}
 /*-----------------------------------
         bio
 ------------------------------------- */
-#bio .page {
+#bio .content--primary {
   height: 80vh;
 }
 .bio--content {
