@@ -237,13 +237,14 @@ h1 small {
 }
 #menu-wrapper .menu-nav {
   list-style: none;
-  text-align: center;
+  /*text-align: center;*/
   z-index: 30;
   overflow: hidden;
   position: relative;
   display: none;
 }
 #menu-wrapper .menu-nav li {
+  padding-right: 70px;
   font-size: 1em;
   z-index: 100;
   height: 2.5em;
