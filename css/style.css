@@ -1,6 +1,7 @@
 /*-----------------------------------
             setup/links
 ------------------------------------- */
+
 @import url(https://fonts.googleapis.com/css?family=Gruppo|Expletus+Sans|Quicksand:400,300|Lato:100,300);
 a, .social-media-list svg {
   transition: all 0.2s ease-in-out
@@ -39,13 +40,6 @@ nav {
 /*----------------------------
           nav/header
 ------------------------------ */
-.header h1 {
-  font-family: 'Expletus Sans';
-  letter-spacing: 5px;
-}
-h1 small {
-  font-family: 'Quicksand';
-}
 
 .header h1 {
   font-family: 'Expletus Sans';
@@ -220,25 +214,6 @@ h1 small {
     stroke-dashoffset: -1490;
   }
 }
-
-/*@media (min-width: 600px) {
-    #menu-wrapper {
-      display: none;
-    }
-}
-@media (max-width: 600px){
-  #bio-page,
-  #projects-page,
-  #skillset-page {
-    display: none;
-  }
-}*/
-/*-----------------------------------
-        home
-------------------------------------- */
-#home {
-  height: 100vh;
-}
 @media (min-width: 600px) {
   #menu-wrapper {
     display: none;
@@ -274,6 +249,7 @@ h1 small {
 }
 #menu-wrapper .menu-nav li:hover{
   background: rgba(157, 172, 201, 1);
+  color: white;
  }
 
 /*-----------------------------------
@@ -297,7 +273,6 @@ h1 small {
   height: 78vh;
 }*/
 
-
 /*-----------------------------------
         bio
 ------------------------------------- */
@@ -306,7 +281,6 @@ h1 small {
 }
 .bio--content {
   max-width: 620px;
-  /*height: 100vh;*/
   margin: 0 auto;
   padding: 40px
 }
@@ -446,33 +420,6 @@ h1 small {
         hex hover effects
 ------------------------------------- */
 #hexGrid .hover-box {
-    z-index: 5;
-    width: 100%;
-    height: 100%;
-    background: #222;
-    background: rgba(0, 0, 0, .7);
-    line-height: 24px;
-    letter-spacing: 4px;
-    opacity: 0;
-    padding: 2em;
-    overflow: hidden;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    -webkit-transition: opacity .2s ease-out, -webkit-transform .2s ease-in-out;
-    -moz-transition: opacity .2s ease-out, -moz-transform .2s ease-in-out;
-    -ms-transition: opacity .2s ease-out, -ms-transform .2s ease-in-out;
-    -o-transition: opacity .2s ease-out, -o-transform .2s ease-in-out;
-    transition: opacity .2s ease-out, transform .2s ease-in-out;
-    -webkit-transform: scale3d(1.3, 1.3, 1) translate3d(0, 3%, 0);
-    -moz-transform: scale3d(1.3, 1.3, 1) translate3d(0, 3%, 0);
-    -ms-transform: scale3d(1.3, 1.3, 1) translate3d(0, 3%, 0);
-    -o-transform: scale3d(1.3, 1.3, 1) translate3d(0, 3%, 0);
-    transform: scale3d(1.3, 1.3, 1) translate3d(0, 3%, 0);
-    -webkit-transform-origin: 50% 50%;
-    -moz-transform-origin: 50% 50%;
-    -ms-transform-origin: 50% 50%;
-    -o-transform-origin: 50% 50%;
-    transform-origin: 50% 50%
   z-index: 5;
   width: 100%;
   height: 100%;
@@ -498,7 +445,7 @@ h1 small {
   -moz-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   -o-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
+  transform-origin: 50% 50%
 }
 #hexGrid a:hover .hover-box {
   opacity: 1;
@@ -980,9 +927,6 @@ footer, .footer {
         media queries
 ------------------------------------- */
 @media (min-width: 750px) {
-  #home, .bio--content {
-    height: 78vh;
-  }
   .home {
     display: -moz-box;
     display: -ms-flexbox;
