@@ -20,7 +20,7 @@ body, html {
   -moz-box-sizing: border-box;
   box-sizing: border-box
 }
-a {
+/*a {
   color: #0084FE;
   text-decoration: none
 }
@@ -29,7 +29,7 @@ a:visited {
 }
 a:hover, a:focus, a:active {
   color: #0069cb
-}
+}*/
 a img {
   border: none
 }
@@ -98,8 +98,14 @@ h1 small {
   text-decoration: none;
   color: gray;
 }
-.header a:hover, .nav--main a:hover, .header a.hover_effect, .nav--main.hover_effect {
+#bio-page a:hover,
+#projects-page a:hover,
+#skillset-page a:hover {
+  /*background: rgba(157, 172, 201, 1);*/
   color: #0084FE;
+}
+.nav--main a:hover {
+  color: white;
 }
 .header h1 small {
   font-size: 60%;
@@ -226,14 +232,13 @@ h1 small {
   .nav--main li {
     display: flex;
     justify-content: center;
-    /*padding-left: 5px;*/
+    padding-left: 0px;
     font-size: 1em;
   }
 }
 #menu-wrapper .menu-nav {
   padding-left: 0;
   margin: 0;
-  /*margin-top: 3.1em;*/
   list-style: none;
   text-align: center;
   z-index: 30;
@@ -253,9 +258,7 @@ h1 small {
 #menu-wrapper .menu-nav li:hover{
   background: rgba(157, 172, 201, 1);
   overflow: hidden;
-  color: white;
  }
-
 /*-----------------------------------
         index
 ------------------------------------- */
