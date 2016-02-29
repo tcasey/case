@@ -7,7 +7,7 @@ angular.module('myApp')
       } else {
         $('#icon-wrap-2').removeClass('toOpen').addClass('toClose');
       }
-    });
+    })
 
     $('.menu-nav').click(function() {
       $('#icon-wrap-2').removeClass('toClose').addClass('toOpen');
@@ -18,6 +18,6 @@ angular.module('myApp')
     })
     $('#menu-wrapper').on('click', function() {
       $('.menu-nav').slideToggle(500);
-    });
+    })
 
   });
