@@ -251,6 +251,7 @@ h1 small {
 }
 #menu-wrapper .menu-nav li:hover{
   background: rgba(157, 172, 201, 1);
+  overflow: hidden;
   color: white;
  }
 
@@ -638,7 +639,7 @@ h1 small {
 /*-----------------------------------
             button
 ------------------------------------- */
-/*.button {
+.button {
   background-color: #f2f2f2;
   padding: 4px 8px;
   margin: 10px 0;
@@ -665,7 +666,7 @@ h1 small {
 .img-responsive {
   width: 100%;
   height: auto;
-}*/
+}
 
 /*-----------------------------------
             Float Shadow
