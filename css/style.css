@@ -225,8 +225,8 @@ h1 small {
   }
   .nav--main li {
     display: flex;
-    justify-content: center;
-    /*margin: 3px;*/
+    justify-content: flex-start;
+    padding-left: 30px;
     font-size: 1em;
   }
 }
