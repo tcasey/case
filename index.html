@@ -8,18 +8,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Trevor Casey | Frontend Developer |</title>
   <meta name="description" content="Personal portfolio page for Trevor Casey">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trevor Casey | Frontend Developer |</title>
+    <meta name="description" content="Personal portfolio page for Trevor Casey">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-  <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
 
-<body ng-controller="mainCtrl">
+  <body ng-controller="mainCtrl">
 
-  <nav>
-    <ul class="nav--main">
+    <nav>
 
-      <tc-menu ></tc-menu>
+      <ul class="nav--main">
+
+        <li id="bio-page" class="page-link menu">
+          <a href="bio">Bio</a>
+        </li>
 
       <li id="bio-page" class="page-link menu">
         <a ui-sref="bio">Bio</a>
@@ -34,6 +43,7 @@
       </li>
 
     </ul>
+    <tc-menu ></tc-menu>
   </nav>
 
 
@@ -84,21 +94,17 @@
   </footer>
 
 
-  <script type="text/javascript" src="https://code.angularjs.org/1.5.0/angular.js"></script>
-   <!-- <script type- "text/javascript" src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
-   <script type="text/javascript" src="https://cdn.firebase.com/libs/angularfire/1.1.4/angularfire.js"></script> -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.5.0/angular.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 
-  <script src="js/app.js"></script>
-  <script src="js/mainCtrl.js"></script>
-  <script src="js/homeCtrl.js"></script>
-  <script src="js/bioCtrl.js"></script>
-  <script src="js/projectsCtrl.js"></script>
-  <script src="js/skillsCtrl.js"></script>
-  <script src="js/menuDirective.js">
-
-  </script>
-</body>
+    <script src="js/app.js"></script>
+    <script src="js/mainCtrl.js"></script>
+    <script src="js/homeCtrl.js"></script>
+    <script src="js/bioCtrl.js"></script>
+    <script src="js/projectsCtrl.js"></script>
+    <script src="js/skillsCtrl.js"></script>
+    <script src="js/menuDirective.js"></script>
+  </body>
 
 </html>

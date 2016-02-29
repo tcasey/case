@@ -1,5 +1,6 @@
+ /* @flow */
 angular.module('myApp', ['ui.router'])
-.config(function($urlRouterProvider, $stateProvider){
+.config(function($urlRouterProvider, $stateProvider, $locationProvider){
 
 	$urlRouterProvider
 		.otherwise('home');
@@ -26,13 +27,5 @@ angular.module('myApp', ['ui.router'])
 			templateUrl: 'templates/skillset.html',
 			// controller: 'skillsCtrl',
 	})
-		// $locationProvider.html5Mode(true);
-});
-
-$('#icon-wrap-2').click(function(){
-  if ($(this).hasClass('toClose')){
-    $(this).removeClass('toClose').addClass('toOpen');
-  } else {
-    $(this).removeClass('toOpen').addClass('toClose');
-  }
+		$locationProvider.html5Mode(true);
 });

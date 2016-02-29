@@ -2,7 +2,6 @@
             setup/links
 ------------------------------------- */
 @import url(https://fonts.googleapis.com/css?family=Gruppo|Expletus+Sans|Quicksand:400,300|Lato:100,300);
-
 a, .social-media-list svg {
   transition: all 0.2s ease-in-out
 }
@@ -15,13 +14,6 @@ body, html {
   background-color: #fff;
   font-family: "Quicksand", sans-serif
 }
-
-/*h1 a {
-  font-family: "ailerons";
-  letter-spacing: 4px;
-  font-size: 1.3em;
-}*/
-
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -40,6 +32,9 @@ a:hover, a:focus, a:active, a.hover_effect {
 a img {
   border: none
 }
+nav {
+  height: 50px;
+}
 
 /*----------------------------
           nav/header
@@ -52,6 +47,13 @@ h1 small {
   font-family: 'Quicksand';
 }
 
+.header h1 {
+  font-family: 'Expletus Sans';
+  letter-spacing: 5px;
+}
+h1 small {
+  font-family: 'Quicksand';
+}
 .header, .nav--main, footer, .social-media-list, .pagination {
   display: -moz-box;
   display: -ms-flexbox;
@@ -73,7 +75,7 @@ h1 small {
   padding: 10px 0;
   display: block;
   text-decoration: none;
-  color: gray;
+  color: #bdb380;
 }
 .nav--main li {
   list-style: none;
@@ -95,7 +97,8 @@ h1 small {
 .header h1 {
   width: 100%;
   font-weight: 400;
-  font-size: 2em;
+  font-size: 1.5em;
+  z-index: 1;
 }
 .header h1 a {
   text-decoration: none;
@@ -142,24 +145,25 @@ h1 small {
 [class *="--content"] {
   padding: 10px
 }
+
 /*----------------------------------
         hamburger menu
 ------------------------------------*/
+
 
 /*#menu-wrapper svg {
   -webkit-filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.2));
 }*/
 
 #menu-wrapper .icon-wrap {
-
+  display: flex;
+  justify-content: flex-end;
 }
-
 #menu-wrapper path {
-  stroke: #b3b3b3;
+  stroke: #bdb380;
   stroke-linecap: round;
   stroke-width: 40;
 }
-
 #menu-wrapper path.x {
   stroke-dashoffset: -1490;
   stroke-dasharray: 840 2000;
@@ -170,37 +174,30 @@ h1 small {
   stroke-dasharray: 2520 3000;
   transition: .3s .2s ease-in-out;
 }
-
 #menu-wrapper .toClose path.yy {
   stroke-dashoffset: -1200;
   transition: .5s 0s ease-in-out;
 }
-
 #menu-wrapper path.x2 {
   transform: rotate(0deg) translateX(0px);
   transform-origin: right center;
   transition: .5s 0s ease-in-out;
 }
-
 #menu-wrapper .toClose path.x2:first-of-type {
   transform: rotate(-45deg) translate(-80px, -80px);
 }
-
 #menu-wrapper .toClose path.x2 {
   transform: rotate(45deg) translate(-80px, 80px);
   transition: .3s .2s ease-in-out;
 }
-
 #menu-wrapper circle {
   fill: transparent;
   transition: .5s ease-in-out;
 }
-
 #menu-wrapper .toClose circle {
-  fill: rgba(151, 115, 151, 0.3);
+  fill: rgba(111, 130, 166, 0.36);
   transition: 1s ease-in-out;
 }
-
 #menu-wrapper .toClose svg path.x {
   animation: toCloseX .4s ease-in-out forwards;
 }
@@ -242,11 +239,71 @@ h1 small {
 #home {
   height: 100vh;
 }
+@media (min-width: 600px) {
+  #menu-wrapper {
+    display: none;
+  }
+}
+@media (max-width: 599px) {
+  #bio-page a, #projects-page a, #skillset-page a {
+    display: none;
+  }
+  .nav--main li {
+    display: flex;
+    justify-content: center;
+    /*margin: 3px;*/
+    font-size: 1em;
+  }
+}
+#menu-wrapper .menu-nav {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  z-index: 30;
+  position: relative;
+  display: none;
+}
+#menu-wrapper .menu-nav li {
+  font-size: 1em;
+  z-index: 100;
+  height: 2.5em;
+  width: 10em;
+  background: #f2f2f2;
+  border: 1px solid white;
+}
+#menu-wrapper .menu-nav li:hover{
+  background: rgba(157, 172, 201, 1);
+ }
+
+/*-----------------------------------
+        index
+------------------------------------- */
+
+/*#index-section {
+  height: 78vh;
+}*/
+/*-----------------------------------
+        ui routes
+------------------------------------- */
+  .ui-stuff {
+    z-index: -1;
+  }
+/*-----------------------------------
+        home
+------------------------------------- */
+
+/*#home {
+  height: 78vh;
+}*/
+
 
 /*-----------------------------------
         bio
 ------------------------------------- */
-
+#bio .page {
+  height: 80vh;
+}
 .bio--content {
   max-width: 620px;
   /*height: 100vh;*/
@@ -265,110 +322,129 @@ h1 small {
 /*-----------------------------------
         projects
 ------------------------------------- */
-
 .projects--content li {
   list-style: none;
   line-height: 2em;
 }
 #hexGrid {
-    overflow: hidden;
-    width: 80vw;
-    margin: 0 auto;
-    padding:0.866% 0;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 0.8em;
-
+  overflow: hidden;
+  width: 80vw;
+  margin: 0 auto;
+  padding: 0.866% 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.8em;
 }
 .hex {
-    position: relative;
-    list-style-type: none;
-    float: left;
-    overflow: hidden;
-    visibility: hidden;
-    outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
-    transition-delay: 0.2s;
-
-    -webkit-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
-        -ms-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
-            transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+  position: relative;
+  list-style-type: none;
+  float: left;
+  overflow: hidden;
+  visibility: hidden;
+  outline: 1px solid transparent;
+  transition-delay: 0.2s;
+  -webkit-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+  -ms-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+  transform: rotate(-60deg) skewY(30deg) translatez(-1px);
 }
 .hex * {
-    position: absolute;
-    visibility: visible;
-    outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+  position: absolute;
+  visibility: visible;
+  outline: 1px solid transparent;
 }
 .hexIn {
-    display:block;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    color: #fff;
-    overflow: hidden;
-    -webkit-transform: skewY(-30deg) rotate(60deg);
-        -ms-transform: skewY(-30deg) rotate(60deg);
-            transform: skewY(-30deg) rotate(60deg);
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  -webkit-transform: skewY(-30deg) rotate(60deg);
+  -ms-transform: skewY(-30deg) rotate(60deg);
+  transform: skewY(-30deg) rotate(60deg);
 }
 
 /*-----------------------------------
         hex content
 ------------------------------------- */
-
 .hex img {
-    left: -100%;
-    right: -100%;
-    width: auto;
-    height: 100%;
-    margin: 0 auto;
+  left: -100%;
+  right: -100%;
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
 }
+
 /*-----------------------------------
         hex fade in animations
 ------------------------------------- */
-/* make keyframes that tell the start state and the end state of our object */
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
-.fade-in {
-  opacity:0;  /* make things invisible upon start */
-  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-  -moz-animation:fadeIn ease-in 1;
-  animation:fadeIn ease-in 1;
-
-  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-  -moz-animation-fill-mode:forwards;
-  animation-fill-mode:forwards;
-
-  -webkit-animation-duration:0.6s;
-  -moz-animation-duration:0.6s;
-  animation-duration:0.6s;
+/* keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
 
+  -webkit-animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done it remains at the last keyframe value (opacity: 1)*/
+
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+}
 .fade-in.one {
   -webkit-animation-delay: 0.2s;
   -moz-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
-
 .fade-in.two {
   -webkit-animation-delay: 0.4s;
-  -moz-animation-delay:0.4s;
+  -moz-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
-
 .fade-in.three {
-  -webkit-animation-delay: 0.6s;
-  -moz-animation-delay: 0.6s;
-  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
 }
 .fade-in.four {
-  -webkit-animation-delay: 0.8s;
-  -moz-animation-delay: 0.8s;
-  animation-delay: 0.8s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
 }
+
 /*-----------------------------------
         hex hover effects
 ------------------------------------- */
-
 #hexGrid .hover-box {
     z-index: 5;
     width: 100%;
@@ -397,18 +473,43 @@ h1 small {
     -ms-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
     transform-origin: 50% 50%
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  background: rgba(0, 0, 0, .7);
+  line-height: 24px;
+  letter-spacing: 4px;
+  opacity: 0;
+  padding: 2em;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity .2s ease-out, -webkit-transform .2s ease-in-out;
+  -moz-transition: opacity .2s ease-out, -moz-transform .2s ease-in-out;
+  -ms-transition: opacity .2s ease-out, -ms-transform .2s ease-in-out;
+  -o-transition: opacity .2s ease-out, -o-transform .2s ease-in-out;
+  transition: opacity .2s ease-out, transform .2s ease-in-out;
+  -webkit-transform: scale3d(1.3, 1.3, 1) translate3d(0, 3%, 0);
+  -moz-transform: scale3d(1.3, 1.3, 1) translate3d(0, 3%, 0);
+  -ms-transform: scale3d(1.3, 1.3, 1) translate3d(0, 3%, 0);
+  -o-transform: scale3d(1.3, 1.3, 1) translate3d(0, 3%, 0);
+  transform: scale3d(1.3, 1.3, 1) translate3d(0, 3%, 0);
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
 }
-
 #hexGrid a:hover .hover-box {
-
-    opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    filter: alpha(opacity=100);
-    -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-    -moz-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-    -ms-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-    -o-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
-    transform: scale3d(1, 1, 1) translate3d(0, 0, 0)
+  opacity: 1;
+  overflow: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  -moz-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  -ms-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  -o-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  transform: scale3d(1, 1, 1) translate3d(0, 0, 0)
 }
 #hexGrid .hover-content {
   position: relative;
@@ -420,148 +521,147 @@ h1 small {
   margin: 1em;
   vertical-align: middle;
 }
+
 /*-----------------------------------
         meida queries for hex
 ------------------------------------- */
+@media (min-width:1201px) {
+  /* <- 5-4  hexagons per row */
 
-@media (min-width:1201px) { /* <- 5-4  hexagons per row */
-    .hex {
-        width: 19.2%; /* = (100-4) / 5 */
-        padding-bottom: 22.170%; /* =  width / sin(60deg) */
-    }
-    .hex:nth-child(9n+6),
-    .hex:nth-child(9n+7),
-    .hex:nth-child(9n+8),
-    .hex:nth-child(9n+9) {
-        margin-top: -4.676%;
-        margin-bottom: -4.676%;
-        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-            -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                transform: translateX(50%) rotate(-60deg) skewY(30deg);
-    }
-    .hex:nth-child(9n+6):last-child,
-    .hex:nth-child(9n+7):last-child,
-    .hex:nth-child(9n+8):last-child,
-    .hex:nth-child(9n+9):last-child {
-        margin-bottom: 0;
-    }
-    .hex:nth-child(9n+6) {
-        margin-left: 0.5%;
-        clear: left;
-    }
-    .hex:nth-child(9n+10) {
-        clear: left;
-    }
-    .hex:nth-child(9n+2),
-    .hex:nth-child(9n+ 7) {
-        margin-left: 1%;
-        margin-right: 1%;
-    }
-    .hex:nth-child(9n+3),
-    .hex:nth-child(9n+4),
-    .hex:nth-child(9n+8) {
-        margin-right: 1%;
-    }
+  .hex {
+    width: 19.2%;
+    /* = (100-4) / 5 */
+    padding-bottom: 22.170%;
+    /* =  width / sin(60deg) */
+  }
+  .hex:nth-child(9n+6), .hex:nth-child(9n+7), .hex:nth-child(9n+8), .hex:nth-child(9n+9) {
+    margin-top: -4.676%;
+    margin-bottom: -4.676%;
+    -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  }
+  .hex:nth-child(9n+6):last-child, .hex:nth-child(9n+7):last-child, .hex:nth-child(9n+8):last-child, .hex:nth-child(9n+9):last-child {
+    margin-bottom: 0;
+  }
+  .hex:nth-child(9n+6) {
+    margin-left: 0.5%;
+    clear: left;
+  }
+  .hex:nth-child(9n+10) {
+    clear: left;
+  }
+  .hex:nth-child(9n+2), .hex:nth-child(9n+ 7) {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  .hex:nth-child(9n+3), .hex:nth-child(9n+4), .hex:nth-child(9n+8) {
+    margin-right: 1%;
+  }
 }
-@media (max-width: 1200px) and (min-width:901px) {/* <- 4-3  hexagons per row */
-    .hex {
-        width: 24.25%; /* = (100-3) / 4 */
-        padding-bottom: 28.001%; /* =  width / sin(60deg) */
-    }
-    .hex:nth-child(7n+5),
-    .hex:nth-child(7n+6),
-    .hex:nth-child(7n+7) {
-        margin-top: -6.134%;
-        margin-bottom: -6.134%;
-        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-            -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                transform: translateX(50%) rotate(-60deg) skewY(30deg);
-    }
-    .hex:nth-child(7n+5):last-child,
-    .hex:nth-child(7n+6):last-child,
-    .hex:nth-child(7n+7):last-child {
-        margin-bottom: 0;
-    }
-    .hex:nth-child(7n+2),
-    .hex:nth-child(7n+6) {
-        margin-left: 1%;
-        margin-right: 1%;
-    }
-    .hex:nth-child(7n+3) {
-        margin-right: 1%;
-    }
-    .hex:nth-child(7n+8) {
-        clear: left;
-    }
-    .hex:nth-child(7n+5) {
-        clear: left;
-        margin-left: 0.5%;
-    }
+@media (max-width: 1200px) and (min-width:901px) {
+  /* <- 4-3  hexagons per row */
+
+  .hex {
+    width: 24.25%;
+    /* = (100-3) / 4 */
+    padding-bottom: 28.001%;
+    /* =  width / sin(60deg) */
+  }
+  .hex:nth-child(7n+5), .hex:nth-child(7n+6), .hex:nth-child(7n+7) {
+    margin-top: -6.134%;
+    margin-bottom: -6.134%;
+    -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  }
+  .hex:nth-child(7n+5):last-child, .hex:nth-child(7n+6):last-child, .hex:nth-child(7n+7):last-child {
+    margin-bottom: 0;
+  }
+  .hex:nth-child(7n+2), .hex:nth-child(7n+6) {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  .hex:nth-child(7n+3) {
+    margin-right: 1%;
+  }
+  .hex:nth-child(7n+8) {
+    clear: left;
+  }
+  .hex:nth-child(7n+5) {
+    clear: left;
+    margin-left: 0.5%;
+  }
 }
-@media (max-width: 900px) and (min-width:601px) { /* <- 3-2  hexagons per row */
-    .hex {
-        width: 32.666%; /* = (100-2) / 3 */
-        padding-bottom: 37.720%; /* =  width / sin(60) */
-    }
-    .hex:nth-child(5n+4),
-    .hex:nth-child(5n+5) {
-        margin-top: -8.564%;
-        margin-bottom: -8.564%;
-        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-            -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                transform: translateX(50%) rotate(-60deg) skewY(30deg);
-    }
-    .hex:nth-child(5n+4):last-child,
-    .hex:nth-child(5n+5):last-child {
-        margin-bottom: 0;
-    }
-    .hex:nth-child(5n+4) {
-        margin-right: 1%;
-        margin-left: 0.5%;
-    }
-    .hex:nth-child(5n+2) {
-        margin-left: 1%;
-        margin-right: 1%;
-    }
-    .hex:nth-child(5n+6) {
-        clear: left;
-    }
+@media (max-width: 900px) and (min-width:601px) {
+  /* <- 3-2  hexagons per row */
+
+  .hex {
+    width: 32.666%;
+    /* = (100-2) / 3 */
+    padding-bottom: 37.720%;
+    /* =  width / sin(60) */
+  }
+  .hex:nth-child(5n+4), .hex:nth-child(5n+5) {
+    margin-top: -8.564%;
+    margin-bottom: -8.564%;
+    -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  }
+  .hex:nth-child(5n+4):last-child, .hex:nth-child(5n+5):last-child {
+    margin-bottom: 0;
+  }
+  .hex:nth-child(5n+4) {
+    margin-right: 1%;
+    margin-left: 0.5%;
+  }
+  .hex:nth-child(5n+2) {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  .hex:nth-child(5n+6) {
+    clear: left;
+  }
 }
-@media (max-width: 600px) { /* <- 2-1  hexagons per row */
-    .hex {
-        width: 49.5%; /* = (100-1) / 2 */
-        padding-bottom: 57.158%; /* =  width / sin(60) */
-    }
-    .hex:nth-child(3n+3) {
-        margin-top: -13.423%;
-        margin-bottom: -13.423%;
-        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-            -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                transform: translateX(50%) rotate(-60deg) skewY(30deg);
-    }
-    .hex:nth-child(3n+3):last-child {
-        margin-bottom: 0;
-    }
-    .hex:nth-child(3n+3) {
-        margin-left: 0.5%;
-    }
-    .hex:nth-child(3n+2) {
-        margin-left: 1%;
-    }
-    .hex:nth-child(3n+4) {
-        clear: left;
-    }
+@media (max-width: 600px) {
+  /* <- 2-1  hexagons per row */
+
+  .hex {
+    width: 49.5%;
+    /* = (100-1) / 2 */
+    padding-bottom: 57.158%;
+    /* =  width / sin(60) */
+  }
+  .hex:nth-child(3n+3) {
+    margin-top: -13.423%;
+    margin-bottom: -13.423%;
+    -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  }
+  .hex:nth-child(3n+3):last-child {
+    margin-bottom: 0;
+  }
+  .hex:nth-child(3n+3) {
+    margin-left: 0.5%;
+  }
+  .hex:nth-child(3n+2) {
+    margin-left: 1%;
+  }
+  .hex:nth-child(3n+4) {
+    clear: left;
+  }
 }
 @media (max-width: 400px) {
-    #hexGrid {
-        font-size: 10px;
-    }
+  #hexGrid {
+    font-size: 10px;
+  }
 }
 
 /*-----------------------------------
          skillset
  ------------------------------------- */
-
 .skillset--content h1 {
   text-align: center;
 }
@@ -587,8 +687,7 @@ h1 small {
 /*-----------------------------------
             button
 ------------------------------------- */
-
-.button {
+/*.button {
   background-color: #f2f2f2;
   padding: 4px 8px;
   margin: 10px 0;
@@ -615,12 +714,11 @@ h1 small {
 .img-responsive {
   width: 100%;
   height: auto;
-}
+}*/
 
 /*-----------------------------------
             Float Shadow
 ------------------------------------- */
-
 .hvr-float-shadow {
   display: inline-block;
   vertical-align: middle;
@@ -649,6 +747,7 @@ h1 small {
   background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.13) 0%, rgba(0, 0, 0, 0) 80%);
   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.13) 0%, rgba(0, 0, 0, 0) 80%);
   /* W3C */
+
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-property: transform, opacity;
@@ -669,14 +768,13 @@ h1 small {
 /*-----------------------------------
               Bounce
 ------------------------------------- */
-
 #home {
   -webkit-animation: grow 1s ease-out backwards;
   -moz-animation: grow 1s ease-out backwards;
   -o-animation: grow 1s ease-out backwards;
   animation: grow 1s ease-out backwards;
 }
-.rowOne-container, #bio {
+.rowOne-container {
   -webkit-animation: fade_in 1s ease-out backwards;
   -moz-animation: fade_in 1s ease-out backwards;
   -o-animation: fade_in 1s ease-out backwards;
@@ -834,7 +932,6 @@ h1 small {
 /*-----------------------------------
             footer
 ------------------------------------- */
-
 footer, .footer {
   padding: 0;
   margin: -4px 0 0 0;
@@ -882,7 +979,6 @@ footer, .footer {
 /*-----------------------------------
         media queries
 ------------------------------------- */
-
 @media (min-width: 750px) {
   #home, .bio--content {
     height: 78vh;
@@ -895,6 +991,9 @@ footer, .footer {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+  }
+  #home {
+    height: 78vh;
   }
   .home--image, .home--content {
     display: inline-block;

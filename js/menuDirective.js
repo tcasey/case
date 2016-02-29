@@ -1,11 +1,14 @@
+/* @flow */
 angular.module('myApp')
-  .directive('tcMenu', function () {
-    return{
-      scope: {
-        menuOptions: '',
-      },
+  .directive('tcMenu', function() {
+    return {
+      restrict: 'E',
       controller: 'mainCtrl',
       templateUrl: 'templates/menu.html',
-      restrict: 'E'
-    };
+      scope: {
+        info: '=',
+        text: "@",
+        whatever: "@"
+      }
+    }
   })
