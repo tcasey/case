@@ -237,7 +237,7 @@ h1 small {
 }
 #menu-wrapper .menu-nav {
   list-style: none;
-  /*text-align: center;*/
+  text-align: center;
   z-index: 30;
   overflow: hidden;
   position: relative;
@@ -249,7 +249,7 @@ h1 small {
   z-index: 100;
   height: 2.5em;
   overflow: hidden;
-  width: 10em;
+  width: 15em;
   background: #f2f2f2;
   border-top: 1px solid white;
 }
