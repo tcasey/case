@@ -250,7 +250,7 @@ h1 small {
   z-index: 100;
   height: 2.5em;
   overflow: hidden;
-  width: 9em;
+  width: 7em;
   background: #f2f2f2;
   border-top: 1px solid white;
 }
@@ -317,17 +317,52 @@ h1 small {
   font-family: 'Quicksand', sans-serif;
   font-size: 0.8em;
 }
+.swipe {
+    /*position: inherit;*/
+    top: 0;
+    width: 150px;
+    height: 120px;
+    right: inherit;
+    bottom: inherit;
+    left: inherit;
+}
+
+.hexImage {
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+
+}
+.hexContent {
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    background: #b3b3b3;
+    line-height: normal;
+}
+.hexContent h2 {
+  padding: 20px;
+}
+.hexContent p {
+    padding: 5px;
+    margin-top: 70px;
+}
+.hexContent:hover {
+  background-color: rgba(96, 96, 96, 0.45);
+}
 .hex {
-  position: relative;
-  list-style-type: none;
-  float: left;
-  overflow: hidden;
-  visibility: hidden;
-  outline: 1px solid transparent;
-  transition-delay: 0.2s;
-  -webkit-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
-  -ms-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
-  transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+    position: relative;
+    list-style-type: none;
+    float: left;
+    overflow: hidden;
+    visibility: hidden;
+
+    outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+    transition-delay: 0.2s;
+
+    -webkit-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+        -ms-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+            transform: rotate(-60deg) skewY(30deg) translatez(-1px);
 }
 .hex * {
   position: absolute;
@@ -340,6 +375,7 @@ h1 small {
   height: 100%;
   text-align: center;
   color: #fff;
+  background-color: lightGray;
   overflow: hidden;
   -webkit-transform: skewY(-30deg) rotate(60deg);
   -ms-transform: skewY(-30deg) rotate(60deg);
@@ -428,7 +464,7 @@ h1 small {
 /*-----------------------------------
         hex hover effects
 ------------------------------------- */
-#hexGrid .hover-box {
+/*#hexGrid .hover-box {
   z-index: 5;
   width: 100%;
   height: 100%;
@@ -476,7 +512,7 @@ h1 small {
   font-family: 'Quicksand';
   margin: 1em;
   vertical-align: middle;
-}
+}*/
 
 /*-----------------------------------
         meida queries for hex
