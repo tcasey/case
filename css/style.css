@@ -67,7 +67,8 @@ h1 small {
 }
 .nav--main a {
   padding: 10px 0;
-  display: block;
+  display: flex;
+  justify-content: space-around;
   text-decoration: none;
   color: #bdb380;
 }
@@ -629,7 +630,7 @@ h1 small {
   line-height: 2em;
 }
 .rowOne-container, .rowTwo-container, .rowThree-container, .rowFour-container, .rowFive-container {
-  width: 90vw;
+  width: 95vw;
   height: 100%;
   display: flex;
   align-items: flex-end;
