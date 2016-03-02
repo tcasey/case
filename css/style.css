@@ -337,26 +337,42 @@ h1 small {
     width: 100%;
     height: 100%;
     padding: 1em;
-    background: #b3b3b3;
+    background: #e2e2e2;
     line-height: normal;
     list-style: none;
 }
 .hexContent h2 {
+  position: relative;
+}
+.hexContent span {
+  font-size: 1.1em;
+  text-align: justify;
+  /*margin: 1em;*/
+  top: 1em;
+  position: relative;
   padding: 10px;
-  margin: 1em;
-
+  height: 100px;
+  width: 100px;
 }
-.hexContent a {
+/*.hexContent a {
+  font-size: 0.9em;
   text-decoration: none;
-  color: white;
+  color: #0084FE;
+}*/
+.hexContent .git-link {
+  cursor: pointer;
+  position: relative;
+  /*padding: 8em;*/
+  top: 1.7em;
+  margin-right: 2em;
 }
+.hexContent svg {
+  fill: rgba(76, 102, 152, 0.84);
+}
+.hexContent svg:hover {
+  /*transition-delay: 0.3s;*/
 
-.hexContent p {
-    padding: 5px;
-    margin-top: 60px;
-}
-.hexContent:hover {
-  background-color: rgba(96, 96, 96, 0.45);
+  fill: white;
 }
 .hex {
     position: relative;
