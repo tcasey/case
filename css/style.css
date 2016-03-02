@@ -494,6 +494,16 @@ h1 small {
         meida queries for hex
 ------------------------------------- */
 @media (min-width:1201px) {
+  .hexContent span {
+    font-size: 1.2em;
+    font-weight: 600;
+    line-height: 1px;
+    top: 3em;
+  }
+  .hexContent svg {
+    top: 4em;
+    margin-right: 2em;
+  }
   /* <- 5-4  hexagons per row */
 
   .hex {
@@ -528,6 +538,17 @@ h1 small {
   }
 }
 @media (max-width: 1200px) and (min-width:901px) {
+
+  .hexContent span {
+    font-size: 1.2em;
+    font-weight: 600;
+    line-height: 1px;
+    top: 4em;
+  }
+  .hexContent svg {
+    top: 5em;
+  }
+
   /* <- 4-3  hexagons per row */
 
   .hex {
@@ -562,6 +583,17 @@ h1 small {
   }
 }
 @media (max-width: 900px) and (min-width:601px) {
+
+  .hexContent span {
+    font-size: 1.2em;
+    font-weight: 600;
+    line-height: 1px;
+    top: 3em;
+  }
+  .hexContent svg {
+    top: 2em;
+  }
+
   /* <- 3-2  hexagons per row */
 
   .hex {
@@ -593,6 +625,16 @@ h1 small {
   }
 }
 @media (max-width: 600px) {
+  .hexContent span {
+    font-size: 1.2em;
+    font-weight: 600;
+    line-height: 1px;
+    top: 3em;
+  }
+  .hexContent svg {
+    top: 2em;
+  }
+
   /* <- 2-1  hexagons per row */
 
   .hex {

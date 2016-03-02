@@ -1,6 +1,6 @@
 
 angular.module('myApp', ['ui.router', 'ngAnimate', 'ngTouch'])
-.config(function($urlRouterProvider, $stateProvider){
+.config(function($urlRouterProvider, $stateProvider, $locationProvider){
 
  $urlRouterProvider
 	 .otherwise('home');
@@ -27,5 +27,5 @@ angular.module('myApp', ['ui.router', 'ngAnimate', 'ngTouch'])
 		 templateUrl: 'templates/skillset.html',
 		 // controller: 'skillsCtrl',
  })
-	//  $locationProvider.html5Mode(true);
+	 $locationProvider.html5Mode(true);
 });
