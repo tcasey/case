@@ -7,20 +7,20 @@
 
       <ul id="hexGrid">
           <li class="hex fade-in three">
-              <div class="hexIn" ng-controller="hex1Ctrl as responsive" ng-include="responsive.ngIncludeSelected.url" >
+              <div class="hexIn" ng-controller="hex1Ctrl as responsive" ng-include="responsive.ngIncludeSelected.url" ng-class="{'moveToLeft' : responsive.moveToLeft}">
             </div>
           </li>
 
 
 
           <li class="hex fade-in one">
-              <div class="hexIn" ng-controller="hex2Ctrl as responsive" ng-include="responsive.ngIncludeSelected.url" >
+              <div class="hexIn" ng-controller="hex2Ctrl as responsive" ng-include="responsive.ngIncludeSelected.url" ng-class="{'moveToLeft' : responsive.moveToLeft}">
             </div>
           </li>
 
 
         <li class="hex fade-in two">
-          <div class="hexIn" ng-controller="hex3Ctrl as responsive" ng-include="responsive.ngIncludeSelected.url" >
+          <div class="hexIn" ng-controller="hex3Ctrl as responsive" ng-include="responsive.ngIncludeSelected.url" ng-class="{'moveToLeft' : responsive.moveToLeft}">
           </div>
         </li>
 
