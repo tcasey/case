@@ -74,8 +74,8 @@ h1 small {
 }
 .nav--main li {
   list-style: none;
-  display: inline-block;
-  width: calc(25% - 4px);
+  /*display: inline-block;
+  width: calc(25% - 4px);*/
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
