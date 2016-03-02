@@ -367,12 +367,12 @@ h1 small {
   margin-right: 2em;
 }
 .hexContent svg {
-  fill: rgba(76, 102, 152, 0.84);
+  fill: rgba(157, 172, 201, 1);
 }
 .hexContent svg:hover {
   /*transition-delay: 0.3s;*/
 
-  fill: white;
+  fill: rgba(135, 149, 176, 1);
 }
 .hex {
     position: relative;
