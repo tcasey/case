@@ -153,6 +153,7 @@ h1 small {
 #menu-wrapper .icon-wrap {
   display: flex;
   justify-content: flex-end;
+  cursor: pointer;
 }
 #menu-wrapper path {
   stroke: #bdb380;
@@ -324,6 +325,7 @@ h1 small {
     right: inherit;
     bottom: inherit;
     left: inherit;
+
 }
 /*--------------------------
       hex stuff
@@ -332,7 +334,7 @@ h1 small {
     width: 100%;
     height: 100%;
     padding: 2em;
-
+    cursor: pointer;
 }
 .hexContent {
     width: 100%;
@@ -341,6 +343,7 @@ h1 small {
     background: #f2f2f2;
     line-height: normal;
     list-style: none;
+    cursor: pointer;
 }
 .hexContent h2 {
   position: relative;
