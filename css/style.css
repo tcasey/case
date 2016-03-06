@@ -268,13 +268,15 @@ h1 small {
 /*-----------------------------------
         ui routes
 ------------------------------------- */
-  .ui-stuff {
+  /*.ui-stuff {
     z-index: -1;
-  }
+  }*/
 /*-----------------------------------
         home
 ------------------------------------- */
-
+/*.content--primary {
+  height: 70vh;
+}*/
 @media (max-width: 475px ) {
   .home--image img {
     width: 70%;
@@ -340,6 +342,12 @@ svg {
 /*-----------------------------------
         projects
 ------------------------------------- */
+#swipe-more {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  letter-spacing: 3px;
+}
 .projects--content li {
   list-style: none;
   line-height: 2em;
@@ -707,7 +715,11 @@ svg {
     font-size: 11px;
   }
 }
-
+@media (max-width: 350px) {
+  #hexGrid {
+    font-size: 9.5px;
+  }
+}
 /*-----------------------------------
          skillset
  ------------------------------------- */
