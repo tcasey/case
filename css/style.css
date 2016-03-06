@@ -314,50 +314,37 @@ svg {
       -webkit-align-items: center;
       -moz-align-items: center;
       transition: all 0.8s;
-      animation-name: colorChange;
-      animation-duration: 6s;
-      animation-iteration-count: infinite;
-      -webkit-animation-name: colorChange;
-      -webkit-animation-duration: 6s;
-      -webkit-animation-iteration-count: infinite;
+
+      background: linear-gradient(270deg, rgba(157, 172, 201, 1), rgba(111, 130, 166, 0.36));
+      background-size: 400% 400%;
+      -webkit-animation: colorChange 9s ease infinite;
+      -moz-animation: colorChange 9s ease infinite;
+      -o-animation: colorChange 9s ease infinite;
+      animation: colorChange 9s ease infinite;
       z-index: 50;
     }
 
-@keyframes colorChange  {
-  0%  {
-     background-color: rgba(157, 172, 201, 1);
-  }
-  25% {
-    background-color: rgba(111, 130, 166, 0.36);
-  }
-  50% {
-    background-color: rgba(157, 172, 201, 1);
-  }
-  75% {
-    background-color: rgba(111, 130, 166, 0.36);
-  }
-100% {
-    background-color:rgba(157, 172, 201, 1);
-  }
-}
 
-@-webkit-keyframes colorChange {
-  0%  {
-     background-color: rgba(157, 172, 201, 1);
-  }
-  25% {
-    background-color: rgba(111, 130, 166, 0.36);
-  }
-  50% {
-    background-color: rgba(157, 172, 201, 1);
-  }
-  75% {
-    background-color: rgba(111, 130, 166, 0.36);
-  }
-100% {
-    background-color:rgba(157, 172, 201, 1);
-  }
-}
+    @-webkit-keyframes colorChange {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
+    @-moz-keyframes colorChange {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
+    @-o-keyframes colorChange {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
+    @keyframes colorChange {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
 /*@media (min-width: 370px) {
   #bio .back {
     height: 250px;
