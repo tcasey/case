@@ -101,7 +101,8 @@ h1 small {
 }
 #bio-page a:hover,
 #projects-page a:hover,
-#skillset-page a:hover {
+#skillset-page a:hover,
+#waka-page a:hover {
   /*background: rgba(157, 172, 201, 1);*/
   color: #0084FE;
 }
@@ -222,7 +223,7 @@ h1 small {
   }
 }
 @media (max-width: 599px) {
-  #bio-page a, #projects-page a, #skillset-page a {
+  #bio-page a, #projects-page a, #skillset-page a, #waka-page a {
     display: none;
   }
   .nav--main li {
@@ -284,24 +285,39 @@ h1 small {
   }
 }
 /*-----------------------------------
+        waka
+------------------------------------- */
+
+/*.waka--content {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 40px;
+  z-index: 2;
+}*/
+.waka-data {
+  display: flex;
+  justify-content: center;
+}
+/*-----------------------------------
         bio
 ------------------------------------- */
 #bio .content--primary {
-  height: 80vh;
+  /*height: 80vh;*/
 }
 .bio--content {
   max-width: 620px;
   margin: 0 auto;
-  padding: 40px
+  padding: 40px;
+  height: 84vh;
+  z-index: 2;
 }
 .bio--content svg {
-  z-index: 80;
+  z-index: 20;
   /*width: 300px;
   height: 300px;*/
   /*border-radius: 100%*/
 }
-svg {
-}
+
   .back{
       overflow: hidden;
       width: auto;
@@ -339,6 +355,14 @@ svg {
       50%{background-position:90% 100%}
       100%{background-position:11% 0%}
   }
+  /*@media (min-width: 390px ) {
+    #bio--content {
+      height: 90vh;
+    }
+    #bio--content span {
+      margin: 0px;
+    }
+  }*/
 /*-----------------------------------
         projects
 ------------------------------------- */

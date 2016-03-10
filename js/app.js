@@ -27,5 +27,10 @@ angular.module('myApp', ['ui.router', 'ngAnimate', 'ngTouch'])
 		 templateUrl: 'templates/skillset.html',
 		 // controller: 'skillsCtrl',
  })
+ .state('waka',{
+		 url: '/waka',
+		 templateUrl: 'templates/waka.html',
+		 controller: 'wakaCtrl',
+ })
 	//  $locationProvider.html5Mode(true);
 });
