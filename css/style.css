@@ -1067,6 +1067,7 @@ footer, .footer {
   padding: 0;
   margin: -4px 0 0 0;
   border-top: #f2f2f2 1px solid;
+
 }
 .social-media-list {
   margin: 0;
@@ -1079,6 +1080,7 @@ footer, .footer {
   padding: 10px 5px;
   text-align: center;
   display: inline-block;
+  align-items: flex-end;
   width: calc(20% - 4px);
   -webkit-flex: 1 0 20%;
   -ms-flex: 1 0 20%;

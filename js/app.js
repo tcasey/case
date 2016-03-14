@@ -31,6 +31,6 @@ angular.module('myApp', ['ui.router', 'ngAnimate', 'ngTouch'])
 		 url: '/waka',
 		 templateUrl: 'templates/waka.html',
 		 controller: 'wakaCtrl',
- })
+ });
 	//  $locationProvider.html5Mode(true);
 });
