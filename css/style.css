@@ -20,6 +20,7 @@ body, html {
   -moz-box-sizing: border-box;
   box-sizing: border-box
 }
+
 /*a {
   color: #0084FE;
   text-decoration: none
@@ -30,6 +31,7 @@ a:visited {
 a:hover, a:focus, a:active {
   color: #0069cb
 }*/
+
 a img {
   border: none
 }
@@ -99,10 +101,7 @@ h1 small {
   text-decoration: none;
   color: gray;
 }
-#bio-page a:hover,
-#projects-page a:hover,
-#skillset-page a:hover,
-#waka-page a:hover {
+#bio-page a:hover, #projects-page a:hover, #skillset-page a:hover, #waka-page a:hover {
   /*background: rgba(157, 172, 201, 1);*/
   color: #0084FE;
 }
@@ -151,6 +150,7 @@ h1 small {
 /*----------------------------------
         hamburger menu
 ------------------------------------*/
+
 #menu-wrapper .icon-wrap {
   display: flex;
   justify-content: flex-end;
@@ -254,39 +254,51 @@ h1 small {
 #menu-wrapper .menu-nav li:nth-last-child(1) {
   border-bottom: 1px solid white;
 }
-
-#menu-wrapper .menu-nav li:hover{
+#menu-wrapper .menu-nav li:hover {
   background: rgba(157, 172, 201, 1);
   overflow: hidden;
- }
+}
+
 /*-----------------------------------
         index
 ------------------------------------- */
 
+
 /*#index-section {
   height: 78vh;
 }*/
+
+
 /*-----------------------------------
         ui routes
 ------------------------------------- */
-  /*.ui-stuff {
+
+
+/*.ui-stuff {
     z-index: -1;
   }*/
+
+
 /*-----------------------------------
         home
 ------------------------------------- */
+
+
 /*.content--primary {
   height: 70vh;
 }*/
-@media (max-width: 475px ) {
+
+@media (max-width: 475px) {
   .home--image img {
     width: 70%;
     height: 70%;
   }
 }
+
 /*-----------------------------------
         waka
 ------------------------------------- */
+
 
 /*.waka--content {
   max-width: 620px;
@@ -294,16 +306,17 @@ h1 small {
   padding: 40px;
   z-index: 2;
 }*/
+
 .waka-data {
   display: flex;
   justify-content: center;
 }
+
 /*-----------------------------------
         bio
 ------------------------------------- */
-#bio .content--primary {
 
-}
+#bio .content--primary {}
 .bio--content {
   max-width: 620px;
   margin: 0 auto;
@@ -317,45 +330,60 @@ h1 small {
   height: 300px;*/
   /*border-radius: 100%*/
 }
-
-  .back{
-      overflow: hidden;
-      width: auto;
-      height: 200px;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      -webkit-align-items: center;
-      -moz-align-items: center;
-
-      background: linear-gradient(270deg, #f2f2f2, #93a9da);
-      background-size: 70% 70%;
-
-      -webkit-animation: AnimationName 4s ease infinite;
-      -moz-animation: AnimationName 4s ease infinite;
-      animation: AnimationName 4s ease infinite;
+.back {
+  overflow: hidden;
+  width: auto;
+  height: 200px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  background: linear-gradient(270deg, #f2f2f2, #93a9da);
+  background-size: 70% 70%;
+  -webkit-animation: AnimationName 4s ease infinite;
+  -moz-animation: AnimationName 4s ease infinite;
+  animation: AnimationName 4s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 11% 0%
   }
+  50% {
+    background-position: 90% 100%
+  }
+  100% {
+    background-position: 11% 0%
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 11% 0%
+  }
+  50% {
+    background-position: 90% 100%
+  }
+  100% {
+    background-position: 11% 0%
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 11% 0%
+  }
+  50% {
+    background-position: 90% 100%
+  }
+  100% {
+    background-position: 11% 0%
+  }
+}
 
-  @-webkit-keyframes AnimationName {
-      0%{background-position:11% 0%}
-      50%{background-position:90% 100%}
-      100%{background-position:11% 0%}
-  }
-  @-moz-keyframes AnimationName {
-      0%{background-position:11% 0%}
-      50%{background-position:90% 100%}
-      100%{background-position:11% 0%}
-  }
-  @keyframes AnimationName {
-      0%{background-position:11% 0%}
-      50%{background-position:90% 100%}
-      100%{background-position:11% 0%}
-  }
-  /*@media (min-width: 390px ) {
+/*@media (min-width: 390px ) {
     #bio--content {
       height: 90vh;
     }
@@ -363,9 +391,12 @@ h1 small {
       margin: 0px;
     }
   }*/
+
+
 /*-----------------------------------
         projects
 ------------------------------------- */
+
 #swipe-more {
   display: flex;
   justify-content: center;
@@ -384,34 +415,36 @@ h1 small {
   font-family: 'Quicksand', sans-serif;
   font-size: 0.8em;
 }
-
 .swipe {
-    /*position: inherit;*/
-    top: 0;
-    width: 150px;
-    height: 120px;
-    right: inherit;
-    bottom: inherit;
-    left: inherit;
-
+  /*position: inherit;*/
+  top: 0;
+  width: 150px;
+  height: 120px;
+  right: inherit;
+  bottom: inherit;
+  left: inherit;
 }
+
 /*--------------------------
       hex stuff
 ---------------------------- */
+
 .hexImage {
-    width: 100%;
-    height: 100%;
-    padding: 2em;
-    cursor: pointer;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
 }
 .hexContent {
-    width: 100%;
-    height: 100%;
-    padding: 1em;
-    background: #f2f2f2;
-    line-height: normal;
-    list-style: none;
-    cursor: pointer;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  background: #f2f2f2;
+  line-height: normal;
+  list-style: none;
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
 }
 .hexContent h2 {
   position: relative;
@@ -426,19 +459,13 @@ h1 small {
   /*padding: 7px;*/
   top: 1em;
   position: relative;
-
   height: 100px;
   width: 100px;
 }
-/*.hexContent a {
-  font-size: 0.9em;
-  text-decoration: none;
-  color: #0084FE;
-}*/
 .hexContent .git-link {
-  cursor: pointer;
   position: relative;
-  /*padding: 8em;*/
+  cursor: pointer;
+  cursor: -webkit-grabbing;
   top: 1.7em;
   margin-right: 2em;
 }
@@ -447,22 +474,20 @@ h1 small {
 }
 .hexContent svg:hover {
   /*transition-delay: 0.3s;*/
-
   fill: rgba(135, 149, 176, 1);
 }
 .hex {
-    position: relative;
-    list-style-type: none;
-    float: left;
-    overflow: hidden;
-    visibility: hidden;
-
-    outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
-    transition-delay: 0.2s;
-
-    -webkit-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
-        -ms-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
-            transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+  position: relative;
+  list-style-type: none;
+  float: left;
+  overflow: hidden;
+  visibility: hidden;
+  outline: 1px solid transparent;
+  /* fix for jagged edges in FF on hover transition */
+  transition-delay: 0.2s;
+  -webkit-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+  -ms-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+  transform: rotate(-60deg) skewY(30deg) translatez(-1px);
 }
 .hex * {
   position: absolute;
@@ -485,6 +510,7 @@ h1 small {
 /*-----------------------------------
         hex content
 ------------------------------------- */
+
 .hex img {
   left: -100%;
   right: -100%;
@@ -497,7 +523,9 @@ h1 small {
         hex fade in animations
 ------------------------------------- */
 
+
 /* keyframes that tell the start state and the end state of our object */
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -525,37 +553,58 @@ h1 small {
 .fade-in {
   opacity: 0;
   /* make things invisible upon start */
-
   -webkit-animation: fadeIn ease-in 1;
   /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-
   -moz-animation: fadeIn ease-in 1;
   animation: fadeIn ease-in 1;
   -webkit-animation-fill-mode: forwards;
   /* this makes sure that after animation is done it remains at the last keyframe value (opacity: 1)*/
-
   -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-duration: 0.6s;
   -moz-animation-duration: 0.6s;
   animation-duration: 0.6s;
 }
-.fade-in.one {
+.fade-in.two {
   -webkit-animation-delay: 0.2s;
   -moz-animation-delay: 0.2s;
   animation-delay: 0.2s;
+}.fade-in.three {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
-.fade-in.two {
+.fade-in.four {
   -webkit-animation-delay: 0.4s;
   -moz-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
-.fade-in.three {
+.fade-in.five {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+.fade-in.six {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.fade-in.seven {
   -webkit-animation-delay: 0.7s;
   -moz-animation-delay: 0.7s;
   animation-delay: 0.7s;
 }
-.fade-in.four {
+.fade-in.eight {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+.fade-in.nine {
+  -webkit-animation-delay: 0.9s;
+  -moz-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+.fade-in.ten {
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   animation-delay: 1s;
@@ -564,6 +613,7 @@ h1 small {
 /*-----------------------------------
         meida queries for hex
 ------------------------------------- */
+
 @media (min-width:1201px) {
   .hexContent span {
     font-size: 1.2em;
@@ -576,7 +626,6 @@ h1 small {
     margin-right: 2em;
   }
   /* <- 5-4  hexagons per row */
-
   .hex {
     width: 19.2%;
     /* = (100-4) / 5 */
@@ -609,7 +658,6 @@ h1 small {
   }
 }
 @media (max-width: 1200px) and (min-width:901px) {
-
   .hexContent span {
     font-size: 1.2em;
     font-weight: 600;
@@ -619,9 +667,7 @@ h1 small {
   .hexContent svg {
     top: 5em;
   }
-
   /* <- 4-3  hexagons per row */
-
   .hex {
     width: 24.25%;
     /* = (100-3) / 4 */
@@ -654,7 +700,6 @@ h1 small {
   }
 }
 @media (max-width: 900px) and (min-width:601px) {
-
   .hexContent span {
     font-size: 1.2em;
     font-weight: 600;
@@ -664,9 +709,7 @@ h1 small {
   .hexContent svg {
     top: 2em;
   }
-
   /* <- 3-2  hexagons per row */
-
   .hex {
     width: 32.666%;
     /* = (100-2) / 3 */
@@ -705,9 +748,7 @@ h1 small {
   .hexContent svg {
     top: 2em;
   }
-
   /* <- 2-1  hexagons per row */
-
   .hex {
     width: 49.5%;
     /* = (100-1) / 2 */
@@ -744,9 +785,11 @@ h1 small {
     font-size: 9.5px;
   }
 }
+
 /*-----------------------------------
          skillset
  ------------------------------------- */
+
 .skillset--content h1 {
   text-align: center;
 }
@@ -772,6 +815,7 @@ h1 small {
 /*-----------------------------------
             button
 ------------------------------------- */
+
 .button {
   background-color: #f2f2f2;
   padding: 4px 8px;
@@ -804,6 +848,7 @@ h1 small {
 /*-----------------------------------
             Float Shadow
 ------------------------------------- */
+
 .hvr-float-shadow {
   display: inline-block;
   vertical-align: middle;
@@ -832,7 +877,6 @@ h1 small {
   background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.13) 0%, rgba(0, 0, 0, 0) 80%);
   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.13) 0%, rgba(0, 0, 0, 0) 80%);
   /* W3C */
-
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-property: transform, opacity;
@@ -853,6 +897,7 @@ h1 small {
 /*-----------------------------------
               Bounce
 ------------------------------------- */
+
 #home {
   -webkit-animation: grow 1s ease-out backwards;
   -moz-animation: grow 1s ease-out backwards;
@@ -1017,6 +1062,7 @@ h1 small {
 /*-----------------------------------
             footer
 ------------------------------------- */
+
 footer, .footer {
   padding: 0;
   margin: -4px 0 0 0;
@@ -1064,6 +1110,7 @@ footer, .footer {
 /*-----------------------------------
         media queries
 ------------------------------------- */
+
 @media (min-width: 750px) {
   .home {
     display: -moz-box;
