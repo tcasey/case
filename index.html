@@ -1,88 +1,100 @@
 <!DOCTYPE html>
 <html ng-app="myApp" lang="en">
 
-  <head>
-    <!-- <base href="/"> -->
-    <meta charset="utf-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no">
-    <title>Trevor Casey | Frontend Developer |</title>
-    <meta name="description" content="MEAN stack developer">
+<head>
+  <!-- <base href="/"> -->
+  <meta charset="utf-8">
+  <meta name="description" content="MEAN stack developer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no">
+  <title>Trevor Casey | Frontend Developer |</title>
 
-    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-  <body ng-controller="mainCtrl">
+<body ng-controller="mainCtrl">
 
-    <nav>
+  <nav>
 
-      <ul class="nav--main">
+    <ul class="nav--main">
 
-        <li id="bio-page" class="page-link menu">
-          <a ui-sref="bio">Bio</a>
-        </li>
+      <li id="bio-page" class="page-link menu">
+        <a ui-sref="bio" analytics-on="click" analytics-event="Bio Nav" analytics-category="Nav">Bio</a>
+      </li>
 
-        <!-- <li id="waka-page" class="page-link menu">
+      <!-- <li id="waka-page" class="page-link menu">
           <a ui-sref="waka">Waka</a>
         </li> -->
 
-        <li id="projects-page" class="page-link menu">
-          <a ui-sref="projects">Projects</a>
-        </li>
+      <li id="projects-page" class="page-link menu">
+        <a ui-sref="projects" analytics-on="click" analytics-event="Projects Nav" analytics-category="Nav">Projects</a>
+      </li>
 
-        <li id="skillset-page" class="page-link menu">
-          <a ui-sref="skills">Skills</a>
-        </li>
-      <tc-menu ></tc-menu>
-      </ul>
+      <li id="skillset-page" class="page-link menu">
+        <a ui-sref="skills" analytics-on="click" analytics-event="Skills Nav" analytics-category="Nav">Skills</a>
+      </li>
+      <tc-menu></tc-menu>
+    </ul>
 
-    </nav>
-
-
-    <section id="index-section">
-
-      <ui-view class="ui-stuff"></ui-view>
-
-    </section>
+  </nav>
 
 
+  <section id="index-section">
 
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
-    <script src="//code.jquery.com/jquery-1.12.0.js"></script>
+    <ui-view class="ui-stuff"></ui-view>
 
-
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-touch.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-animate.js"></script>
+  </section>
 
 
+<!-- Imported Scripts -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-touch.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-animate.js"></script>
+  <script src="//code.jquery.com/jquery-1.12.0.js"></script>
+<!-- Main script -->
+  <script src="./bower_components/angulartics/dist/angulartics.min.js"></script>
+  <script src="./bower_components/angulartics-google-analytics/dist/angulartics-google-analytics.min.js"></script>
 
-    <script src="js/app.js"></script>
+<!-- Main script -->
+  <script src="./js/app.js"></script>
 
-    <script src="js/mainCtrl.js"></script>
-    <script src="js/wakaCtrl.js"></script>
+<!-- Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-74900308-1', 'auto');
 
-    <script src="js/wakaService.js"></script>
+    // ga('send', 'pageview');
 
-    <script src="js/hex/hex1Ctrl.js"></script>
-    <script src="js/hex/hex2Ctrl.js"></script>
-    <script src="js/hex/hex3Ctrl.js"></script>
-    <script src="js/hex/hex4Ctrl.js"></script>
-    <script src="js/hex/hex5Ctrl.js"></script>
-    <script src="js/hex/hex6Ctrl.js"></script>
-    <script src="js/hex/hex7Ctrl.js"></script>
-    <script src="js/hex/hex8Ctrl.js"></script>
-    <script src="js/hex/hex9Ctrl.js"></script>
-    <script src="js/hex/hex10Ctrl.js"></script>
-    <script src="js/hex/hex11Ctrl.js"></script>
-    <!-- <script src="js/hex/hex12Ctrl.js"></script> -->
+  </script>
 
-    <script src="js/menuDirective.js"></script>
-    <script src="js/titleDirective.js"></script>
-    <script src="js/footerDirective.js"></script>
-  </body>
-  </body>
+<!-- Services -->
+  <script src="./js/wakaService.js"></script>
+
+<!-- Controllers -->
+  <script src="./js/mainCtrl.js"></script>
+  <script src="./js/wakaCtrl.js"></script>
+  <script src="./js/hex/hex1Ctrl.js"></script>
+  <script src="./js/hex/hex2Ctrl.js"></script>
+  <script src="./js/hex/hex3Ctrl.js"></script>
+  <script src="./js/hex/hex4Ctrl.js"></script>
+  <script src="./js/hex/hex5Ctrl.js"></script>
+  <script src="./js/hex/hex6Ctrl.js"></script>
+  <script src="./js/hex/hex7Ctrl.js"></script>
+  <script src="./js/hex/hex8Ctrl.js"></script>
+  <script src="./js/hex/hex9Ctrl.js"></script>
+  <script src="./js/hex/hex10Ctrl.js"></script>
+  <script src="./js/hex/hex11Ctrl.js"></script>
+  <!-- <script src="./js/hex/hex12Ctrl.js"></script> -->
+
+<!-- Directives -->
+  <script src="./js/menuDirective.js"></script>
+  <script src="./js/titleDirective.js"></script>
+  <script src="./js/footerDirective.js"></script>
+</body>
+</body>
 
 </html>

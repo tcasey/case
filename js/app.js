@@ -1,6 +1,6 @@
 
-angular.module('myApp', ['ui.router', 'ngAnimate', 'ngTouch'])
-.config(function($urlRouterProvider, $stateProvider){
+angular.module('myApp', ['ui.router', 'ngAnimate', 'ngTouch', 'angulartics', 'angulartics.google.analytics'])
+.config(function($urlRouterProvider, $stateProvider, $analyticsProvider){
 
  $urlRouterProvider
 	 .otherwise('home');
