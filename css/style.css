@@ -520,15 +520,10 @@ h1 small {
   margin: 0 auto;
 }
 .iMac svg {
-  left: -105%;
-  top: 5px;
-  width: 50vw;
-  height: 30vh;
-  margin: 0 auto;
+  top: 5%;
+  width: 300px;
+  height: 200px;
 }
-/*.karma svg {
-  fill: #f15a29;
-}*/
 .portfolio svg {
   height: 150px;
   top: 45px;
@@ -546,7 +541,7 @@ h1 small {
 }
 .fizz-buzz svg {
   height: 180px;
-  top: 20px;
+  top: 10%;
   width: 180px;
 }
 /*-----------------------------------
@@ -1109,12 +1104,11 @@ h1 small {
 /*-----------------------------------
             footer
 ------------------------------------- */
-
-footer, .footer {
+.footer {
+  display: flex;
   padding: 0;
   margin: -4px 0 0 0;
   border-top: #f2f2f2 1px solid;
-
 }
 .social-media-list {
   margin: 0;
@@ -1126,12 +1120,9 @@ footer, .footer {
   background-color: #fff;
   padding: 10px 5px;
   text-align: center;
-  display: inline-block;
-  align-items: flex-end;
-  width: calc(20% - 4px);
-  -webkit-flex: 1 0 20%;
-  -ms-flex: 1 0 20%;
-  flex: 1 0 20%;
+  -webkit-flex: 1 0 25%;
+  -ms-flex: 1 0 25%;
+  flex: 1 0 25%;
 }
 .social-media-list svg {
   fill: #000;
@@ -1159,7 +1150,6 @@ footer, .footer {
 /*-----------------------------------
         media queries
 ------------------------------------- */
-
 @media (min-width: 750px) {
   .home {
     display: -moz-box;
