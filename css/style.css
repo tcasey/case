@@ -396,11 +396,8 @@ h1 small {
 /*-----------------------------------
         projects
 ------------------------------------- */
-
-#swipe-more {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+.instruct {
+  text-align: center;
   letter-spacing: 3px;
 }
 .projects--content li {
@@ -424,7 +421,6 @@ h1 small {
   bottom: inherit;
   left: inherit;
 }
-
 /*--------------------------
       hex stuff
 ---------------------------- */
