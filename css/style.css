@@ -425,13 +425,6 @@ h1 small {
       hex stuff
 ---------------------------- */
 
-.hexImage {
-  width: 100%;
-  height: 100%;
-  /*padding: 2em;*/
-  cursor: grabbing;
-  cursor: -webkit-grabbing;
-}
 .hexContent {
   width: 100%;
   height: 100%;
@@ -504,9 +497,15 @@ h1 small {
 }
 
 /*-----------------------------------
-        hex content
+        hex image
 ------------------------------------- */
-
+.hexImage {
+  width: 100%;
+  height: 100%;
+  /*padding: 2em;*/
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
 .hexImage svg {
   left: -100%;
   right: -100%;
@@ -516,7 +515,7 @@ h1 small {
   margin: 0 auto;
 }
 .iMac svg {
-  top: 5%;
+  top: 1px;
   width: 270px;
   height: 200px;
 }
@@ -526,9 +525,8 @@ h1 small {
   width: 150px;
 }
 .smart-shopper svg {
-  height: 120px;
-  top: 35px;
-  /*width: 150px;*/
+  height: 100px;
+  top: 20%;
 }
 .street-fighter svg {
   height: 120px;
@@ -536,9 +534,9 @@ h1 small {
   width: 150px;
 }
 .fizz-buzz svg {
-  height: 180px;
+  height: 140px;
   top: 10%;
-  width: 180px;
+  width: 140px;
 }
 /*-----------------------------------
         hex fade in animations
@@ -646,22 +644,6 @@ h1 small {
     top: 4em;
     margin-right: 2em;
   }
-
-  /*-----------------------------------
-         iMac
- -------------------------------------*/
-
-/*
-#wrapper, #imac {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-#imac {
-  width: 700px;
-  height: 400px;
-}*/
 
   /* <- 5-4  hexagons per row */
   .hex {
@@ -781,7 +763,7 @@ h1 small {
     font-size: 1.2em;
     font-weight: 600;
     line-height: 1px;
-    top: 3em;
+    top: 1.8em;
   }
   .hexContent svg {
     top: 2em;
