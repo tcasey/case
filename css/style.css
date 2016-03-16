@@ -515,9 +515,10 @@ h1 small {
   margin: 0 auto;
 }
 .iMac svg {
-  top: 1px;
-  width: 270px;
-  height: 200px;
+  left: -105%;
+  top: 10px;
+  width: 255px;
+  height: 140px;
 }
 .portfolio svg {
   height: 150px;
@@ -766,7 +767,7 @@ h1 small {
     top: 1.8em;
   }
   .hexContent svg {
-    top: 2em;
+    top: 0.5em;
   }
   /* <- 2-1  hexagons per row */
   .hex {
