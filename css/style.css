@@ -103,7 +103,7 @@ h1 small {
 }
 #bio-page a:hover, #projects-page a:hover, #skillset-page a:hover, #waka-page a:hover {
   /*background: rgba(157, 172, 201, 1);*/
-  color: #0084FE;
+  color: #8fb9ff;
 }
 .nav--main a:hover {
   color: white;
@@ -192,7 +192,8 @@ h1 small {
   transition: .5s ease-in-out;
 }
 #menu-wrapper .toClose circle {
-  fill: rgba(111, 130, 166, 0.36);
+  fill: #8fb9ff;
+  opacity: 0.4;
   transition: 1s ease-in-out;
 }
 #menu-wrapper .toClose svg path.x {
@@ -255,7 +256,7 @@ h1 small {
   border-bottom: 1px solid white;
 }
 #menu-wrapper .menu-nav li:hover {
-  background: rgba(157, 172, 201, 1);
+  background: #8fb9ff;
   overflow: hidden;
 }
 
@@ -343,11 +344,11 @@ h1 small {
   justify-content: center;
   -webkit-align-items: center;
   -moz-align-items: center;
-  background: linear-gradient(270deg, #f2f2f2, #93a9da);
+  background: linear-gradient(270deg, #f2f2f2, #8fb9ff);
   background-size: 70% 70%;
-  -webkit-animation: AnimationName 4s ease infinite;
-  -moz-animation: AnimationName 4s ease infinite;
-  animation: AnimationName 4s ease infinite;
+  -webkit-animation: AnimationName 3.5s ease infinite;
+  -moz-animation: AnimationName 3.5s ease infinite;
+  animation: AnimationName 3.5s ease infinite;
 }
 @-webkit-keyframes AnimationName {
   0% {
@@ -459,7 +460,7 @@ h1 small {
   margin-right: 2em;
 }
 .hexContent svg {
-  fill: rgba(157, 172, 201, 1);
+  fill: #8fb9ff;
 }
 .hexContent svg:hover {
   /*transition-delay: 0.3s;*/
@@ -1112,7 +1113,7 @@ h1 small {
   fill: #000;
 }
 .social-media-list svg:hover, .social-media-list svg:active, .social-media-list svg:focus, .social-media-list svg.hover_effect {
-  fill: #0084FE;
+  fill: #8fb9ff;
 }
 .social-media-list span {
   display: none;
