@@ -68,11 +68,19 @@ h1 small {
   align-items: center;
 }
 .nav--main a {
-  padding: 10px 0;
+
   display: flex;
   justify-content: space-around;
   text-decoration: none;
   color: #bdb380;
+}
+#bio-page, #projects-page, #skillset-page {
+  padding: 10px 0;
+}
+#menu-home, #menu-bio, #menu-projects, #menu-skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .nav--main li {
   list-style: none;
