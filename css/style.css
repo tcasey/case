@@ -335,14 +335,19 @@ h1 small {
 }
 .bio--content svg {
   z-index: 20;
+  height: inherit;
   /*width: 300px;
   height: 300px;*/
   /*border-radius: 100%*/
 }
+#svg-container {
+  display: flex;
+  justify-content: center;
+}
 .back {
-  overflow: hidden;
-  width: auto;
-  height: 200px;
+  /*overflow: hidden;*/
+  width: 226px;
+  height: 255px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -353,43 +358,26 @@ h1 small {
   -webkit-align-items: center;
   -moz-align-items: center;
   background: linear-gradient(270deg, #f2f2f2, #8fb9ff);
-  background-size: 70% 70%;
-  -webkit-animation: AnimationName 3.5s ease infinite;
-  -moz-animation: AnimationName 3.5s ease infinite;
-  animation: AnimationName 3.5s ease infinite;
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 6s ease infinite;
+  -moz-animation: AnimationName 6s ease infinite;
+  animation: AnimationName 6s ease infinite;
 }
+
 @-webkit-keyframes AnimationName {
-  0% {
-    background-position: 11% 0%
-  }
-  50% {
-    background-position: 90% 100%
-  }
-  100% {
-    background-position: 11% 0%
-  }
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 @-moz-keyframes AnimationName {
-  0% {
-    background-position: 11% 0%
-  }
-  50% {
-    background-position: 90% 100%
-  }
-  100% {
-    background-position: 11% 0%
-  }
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 @keyframes AnimationName {
-  0% {
-    background-position: 11% 0%
-  }
-  50% {
-    background-position: 90% 100%
-  }
-  100% {
-    background-position: 11% 0%
-  }
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 /*@media (min-width: 390px ) {
