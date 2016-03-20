@@ -20,18 +20,6 @@ body, html {
   -moz-box-sizing: border-box;
   box-sizing: border-box
 }
-
-/*a {
-  color: #0084FE;
-  text-decoration: none
-}
-a:visited {
-  color: #0084FE
-}
-a:hover, a:focus, a:active {
-  color: #0069cb
-}*/
-
 a img {
   border: none
 }
@@ -93,9 +81,6 @@ h1 small {
   flex: 1 0 auto;
   text-align: center;
   text-transform: lowercase;
-}
-.nav--main li.active a {
-  color: #000;
 }
 .header {
   background-color: #FFF;
@@ -259,8 +244,11 @@ h1 small {
   overflow: hidden;
   width: 7em;
   background: #f2f2f2;
-  border-top: 1px solid white;
+  /*border-top: 1px solid white;*/
   border-left: 1px solid white;
+}
+#menu-home {
+  border-top: 1px solid white;
 }
 #menu-wrapper .menu-nav li:nth-last-child(1) {
   border-bottom: 1px solid white;
@@ -344,10 +332,12 @@ h1 small {
 #svg-container {
   display: flex;
   justify-content: center;
+  border: 15px solid #fafafa;
 }
 .back {
   /*overflow: hidden;*/
-  border-radius: 35%;
+  border: 3px solid #fafafa;
+  /*border-radius: 35%;*/
   width: 226px;
   height: 255px;
   display: -webkit-box;
