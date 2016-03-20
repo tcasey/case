@@ -38,7 +38,9 @@ a img {
 nav {
   height: 50px;
 }
-
+p {
+  padding: 5px;
+}
 /*----------------------------
           nav/header
 ------------------------------ */
@@ -299,7 +301,7 @@ h1 small {
 
 @media (max-width: 475px) {
   .home--image img {
-    width: 70%;
+    width: 95%;
     height: 70%;
   }
 }
@@ -336,9 +338,6 @@ h1 small {
 .bio--content svg {
   z-index: 20;
   height: inherit;
-  /*width: 300px;
-  height: 300px;*/
-  /*border-radius: 100%*/
 }
 #svg-container {
   display: flex;
@@ -346,6 +345,7 @@ h1 small {
 }
 .back {
   /*overflow: hidden;*/
+  border-radius: 35%;
   width: 226px;
   height: 255px;
   display: -webkit-box;
