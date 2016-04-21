@@ -264,6 +264,7 @@ h1 small {
 #menu-wrapper .menu-nav li:hover {
   background: #8fb9ff;
   overflow: hidden;
+  color: white;
 }
 
 /*-----------------------------------
