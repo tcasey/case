@@ -51,6 +51,7 @@ h1 small {
 }
 .nav--main {
   background-color: #f2f2f2;
+  color: #bdb380;
   margin: 0;
   padding: 0;
   display: flex;
@@ -64,6 +65,7 @@ h1 small {
   text-decoration: none;
   color: #bdb380;
 }
+
 #bio-page, #projects-page, #skillset-page {
   padding: 10px 0;
 }
@@ -74,6 +76,7 @@ h1 small {
 }
 .nav--main li {
   list-style: none;
+  color: #bdb380;
   /*display: inline-block;
   width: calc(25% - 4px);*/
   -webkit-flex: 1 0 auto;
@@ -148,6 +151,11 @@ h1 small {
 
 #menu-wrapper .icon-wrap {
   display: flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -ms-flex-pack: flex-end;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end;
   cursor: pointer;
 }
@@ -331,9 +339,14 @@ h1 small {
 }
 #svg-container {
   display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   justify-content: center;
+  -ms-flex-justify: center;
+  -webkit-flex-justify: center;
   border: 15px solid #fafafa;
 }
+
 .back {
   /*overflow: hidden;*/
   border: 3px solid #fafafa;
@@ -451,7 +464,6 @@ h1 small {
   fill: #8fb9ff;
 }
 .hexContent svg:hover {
-  /*transition-delay: 0.3s;*/
   fill: rgba(135, 149, 176, 1);
 }
 .hex {
@@ -568,16 +580,19 @@ h1 small {
   opacity: 0;
   /* make things invisible upon start */
   -webkit-animation: fadeIn ease-in 1;
-  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
   -moz-animation: fadeIn ease-in 1;
   animation: fadeIn ease-in 1;
   -webkit-animation-fill-mode: forwards;
-  /* this makes sure that after animation is done it remains at the last keyframe value (opacity: 1)*/
   -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-duration: 0.6s;
   -moz-animation-duration: 0.6s;
   animation-duration: 0.6s;
+}
+.fade-in.one {
+  -webkit-animation-delay: 0.08s;
+  -moz-animation-delay: 0.08s;
+  animation-delay: 0.08s;
 }
 .fade-in.two {
   -webkit-animation-delay: 0.2s;
@@ -723,6 +738,9 @@ h1 small {
   }
   .hexContent svg {
     top: 2em;
+    /* bug fixish in mozilla */
+    /*margin-top: 5em;
+    margin-left: -4em;*/
   }
   /* <- 3-2  hexagons per row */
   .hex {
@@ -820,7 +838,7 @@ h1 small {
   width: 93vw;
   height: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-around;
   flex-direction: row;
   text-align: center;
