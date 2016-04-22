@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     styles = require('gulp-sass'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
+    deploy = require('gulp-gh-pages');
     // uglifycss = require('gulp-uglifycss'),
     ngAnnotate = require('gulp-ng-annotate'),
     watcher = gulp.watch(['./main/**/*.js', './main/css/*.scss', './main/**/*.html'], ['default']);
@@ -31,6 +32,14 @@ gulp.task('html', function() {
   gulp.src('./main/**/*.html')
     // .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('./public/html'))
+});
+
+
+//  Push build to gh-pages
+
+gulp.task('deploy', function () {
+ return gulp.src("./public/**/*")
+   .pipe(deploy())
 });
 
 
