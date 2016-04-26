@@ -12,7 +12,7 @@ watcher.on('change', function(event) {
 //browser sync to get live server like features with gulp
 
 gulp.task('styles', function() { // .scss is newer file version of .sass
-  gulp.src('./main/**/*.scss')
+  return gulp.src('./main/**/*.scss')
     .pipe(styles())
     // .pipe(uglifycss())
     .pipe(concat('style.css'))
@@ -20,7 +20,7 @@ gulp.task('styles', function() { // .scss is newer file version of .sass
 });
 
 gulp.task('javascript', function() {
-  gulp.src(['./main/**/*.js'])
+  return gulp.src(['./main/**/*.js'])
     .pipe(ngAnnotate())
     // .pipe(uglify())
     .pipe(concat('all.js'))
@@ -28,7 +28,7 @@ gulp.task('javascript', function() {
 });
 
 gulp.task('html', function() {
-  gulp.src('./main/**/*.html')
+  return gulp.src('./main/**/*.html')
     // .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('./public/html'))
 });
