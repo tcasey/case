@@ -35,7 +35,7 @@ angular.module('myApp')
   .directive('tcFooter', function() {
     return {
       restrict: 'E',
-      templateUrl: 'html/templates/templates/footer.html',
+      templateUrl: 'html/templates/footer.html',
       scope: {
         text: "@"
       }
@@ -47,7 +47,7 @@ angular.module('myApp')
   .directive('tcHeader', function() {
     return {
       restrict: 'E',
-      templateUrl: 'html/templates/templates/header.html',
+      templateUrl: 'html/templates/header.html',
       scope: {
         text: "@"
       }
@@ -84,7 +84,7 @@ angular.module('myApp')
     return {
       restrict: 'E',
       controller: 'mainCtrl',
-      templateUrl: 'html/templates/templates/menu.html',
+      templateUrl: 'html/templates/menu.html',
       scope: {
         info: '=',
         text: "@",
@@ -97,7 +97,7 @@ angular.module('myApp')
   .directive('tcTitle', function() {
     return {
       restrict: 'E',
-      templateUrl: 'html/templates/templates/title.html',
+      templateUrl: 'html/templates/title.html',
       scope: {
         text: "@"
       },

@@ -2,7 +2,7 @@ angular.module('myApp')
   .directive('tcTitle', function() {
     return {
       restrict: 'E',
-      templateUrl: 'html/templates/templates/title.html',
+      templateUrl: 'html/templates/title.html',
       scope: {
         text: "@"
       },

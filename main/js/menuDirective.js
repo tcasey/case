@@ -3,7 +3,7 @@ angular.module('myApp')
     return {
       restrict: 'E',
       controller: 'mainCtrl',
-      templateUrl: 'html/templates/templates/menu.html',
+      templateUrl: 'html/templates/menu.html',
       scope: {
         info: '=',
         text: "@",
