@@ -12,13 +12,17 @@
   "dependencies": {
     "autotrack": "^0.6.3",
     "body-parser": "^1.15.0",
+    "browser-sync": "^2.13.0",
     "cors": "^2.7.1",
     "express": "^4.13.4",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
+    "gulp-live-server": "0.0.30",
     "gulp-ng-annotate": "^2.0.0",
     "gulp-sass": "^2.2.0",
+    "gulp-serve": "^1.2.0",
     "gulp-strip-code": "^0.1.4",
+    "gulp-uglify": "^1.5.3",
     "gulp-uglifycss": "^1.0.6"
   },
   "devDependencies": {
