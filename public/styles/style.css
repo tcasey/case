@@ -296,6 +296,10 @@ h1 small {
   display: flex;
   justify-content: center; }
 
+#main {
+  display: flex;
+  justify-content: center; }
+
 /*-----------------------------------
         bio
 ------------------------------------- */

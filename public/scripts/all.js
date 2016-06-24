@@ -125,7 +125,7 @@ angular.module('myApp')
      };
 
      var margin = {top: 100, right: 100, bottom: 100, left: 100},
-       width = Math.min(700, window.innerWidth - 10) - margin.left - margin.right,
+       width = Math.min(500, window.innerWidth - 10) - margin.left - margin.right,
        height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
      var data = [
            [// JS Unit Lesson Tests
@@ -141,15 +141,15 @@ angular.module('myApp')
          ];
      function RadarChart(id, data, options) {
      	var chart = {
-     	 w: 325,				//Width of the circle
-     	 h: 325,				//Height of the circle
+     	 w: 230,				//Width of the circle
+     	 h: 230,				//Height of the circle
      	 margin: {top: 100, right: 100, bottom: 100, left: 100}, //The margins of the SVG
      	 levels: 3,				//How many levels or inner circles should there be drawn
      	 maxValue: 100, 			//What is the value that the biggest circle will represent
      	 labelFactor: 1.25, 	//How much farther than the radius of the outer circle should the labels be placed
      	 wrapWidth: 60, 		//The number of pixels after which a label needs to be given a new line
      	 opacityArea: 0.35, 	//The opacity of the area of the blob
-     	 dotRadius: 4, 			//The size of the colored circles of each blog
+     	 dotRadius: 3, 			//The size of the colored circles of each blog
      	 opacityCircles: 0.1, 	//The opacity of the circles of each blob
      	 strokeWidth: 2, 		//The width of the stroke around each blob
      	 roundStrokes: false,	//If true the area and stroke will follow a round path (cardinal-closed)
