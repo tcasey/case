@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
     styles = require('gulp-sass'),
     concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
+    // uglify = require('gulp-uglify'),
     // uglifycss = require('gulp-uglifycss'),
     ngAnnotate = require('gulp-ng-annotate'),
     watcher = gulp.watch(['./main/**/*.js', './main/css/*.scss', './main/**/*.html'], ['default']);
