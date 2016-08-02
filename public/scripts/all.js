@@ -23,6 +23,60 @@ angular.module('myApp', ['ui.router', 'ngAnimate', 'ngTouch'])
 		 url: '/skills',
 		 templateUrl: 'html/templates/skillset.html',
  })
+
+ .state('bike',{
+    url: '/projects/road-bike-junkie',
+    templateUrl: 'html/templates/hex/hex1Content.html',
+ })
+ .state('h+c',{
+    url: '/projects/h+c',
+    templateUrl: 'html/templates/hex/hex2Content.html',
+ })
+ .state('ncaa',{
+    url: '/projects/ncaa',
+    templateUrl: 'html/templates/hex/hex3Content.html',
+ })
+ .state('karma',{
+    url: '/projects/karma',
+    templateUrl: 'html/templates/hex/hex4Content.html',
+ })
+ .state('junior',{
+    url: '/projects/junior',
+    templateUrl: 'html/templates/hex/hex5Content.html',
+ })
+ .state('do-it',{
+    url: '/projects/do-it',
+    templateUrl: 'html/templates/hex/hex6Content.html',
+ })
+ .state('smart-shopper',{
+    url: '/projects/smart-shopper',
+    templateUrl: 'html/templates/hex/hex7Content.html',
+ })
+ .state('twitter-clone',{
+    url: '/projects/twitter-clone',
+    templateUrl: 'html/templates/hex/hex8Content.html',
+ })
+ .state('hadouken',{
+    url: '/projects/hadouken',
+    templateUrl: 'html/templates/hex/hex9Content.html',
+ })
+ .state('golf',{
+    url: '/projects/golf',
+    templateUrl: 'html/templates/hex/hex10Content.html',
+ })
+ .state('fizz-buzz',{
+    url: '/projects/fizz-buzz',
+    templateUrl: 'html/templates/hex/hex11Content.html',
+ })
+ .state('dots',{
+    url: '/projects/dots',
+    templateUrl: 'html/templates/hex/hex12Content.html',
+ })
+ .state('memory',{
+    url: '/projects/memory',
+    templateUrl: 'html/templates/hex/hex13Content.html',
+ })
+
  .state('waka',{
 		 url: '/waka',
 		 templateUrl: 'html/templates/waka.html',
@@ -466,470 +520,3 @@ angular.module('myApp')
     };
 
   }]);
-
-// HEX CTRL 10
-function tabsSwipeCtrlFn10() {
-    var responsive = this;
-    responsive.ngIncludeTemplates = [
-      {
-        index: 0,
-        name: 'first',
-        url: 'html/templates/hex/hex10Image.html'
-      },
-      {
-        index: 1,
-        name: 'second',
-        url: 'html/templates/hex/hex10Content.html'
-      },
-    ];
-
-    responsive.selectPage = selectPage;
-
-    /**
-    * Initialize with the first page opened
-    */
-    responsive.ngIncludeSelected = responsive.ngIncludeTemplates[0];
-
-    function selectPage(indexSelected) {
-        if (responsive.ngIncludeTemplates[indexSelected].index > responsive.ngIncludeSelected.index) {
-            responsive.moveToLeft = false;
-        } else {
-            responsive.moveToLeft = true;
-        }
-        responsive.ngIncludeSelected = responsive.ngIncludeTemplates[indexSelected];
-    }
-}
-
-angular.module('myApp')
-    .controller('hex10Ctrl', tabsSwipeCtrlFn10);
-
-// HEX CTRL 11
-function tabsSwipeCtrlFn11() {
-    var responsive = this;
-    responsive.ngIncludeTemplates = [
-      {
-        index: 0,
-        name: 'first',
-        url: 'html/templates/hex/hex11Image.html'
-      },
-      {
-        index: 1,
-        name: 'second',
-        url: 'html/templates/hex/hex11Content.html'
-      },
-    ];
-
-    responsive.selectPage = selectPage;
-
-    /**
-    * Initialize with the first page opened
-    */
-    responsive.ngIncludeSelected = responsive.ngIncludeTemplates[0];
-
-    function selectPage(indexSelected) {
-        if (responsive.ngIncludeTemplates[indexSelected].index > responsive.ngIncludeSelected.index) {
-            responsive.moveToLeft = false;
-        } else {
-            responsive.moveToLeft = true;
-        }
-        responsive.ngIncludeSelected = responsive.ngIncludeTemplates[indexSelected];
-    }
-}
-
-angular.module('myApp')
-    .controller('hex11Ctrl', tabsSwipeCtrlFn11);
-
-// HEX CTRL 12
-function tabsSwipeCtrlFn12() {
-    var responsive = this;
-    responsive.ngIncludeTemplates = [
-      {
-        index: 0,
-        name: 'first',
-        url: 'html/templates/hex/hex12Image.html'
-      },
-      {
-        index: 1,
-        name: 'second',
-        url: 'html/templates/hex/hex12Content.html'
-      },
-    ];
-
-    responsive.selectPage = selectPage;
-
-    /**
-    * Initialize with the first page opened
-    */
-    responsive.ngIncludeSelected = responsive.ngIncludeTemplates[0];
-
-    function selectPage(indexSelected) {
-        if (responsive.ngIncludeTemplates[indexSelected].index > responsive.ngIncludeSelected.index) {
-            responsive.moveToLeft = false;
-        } else {
-            responsive.moveToLeft = true;
-        }
-        responsive.ngIncludeSelected = responsive.ngIncludeTemplates[indexSelected];
-    }
-}
-
-angular.module('myApp')
-    .controller('hex12Ctrl', tabsSwipeCtrlFn12);
-
-// HEX CTRL 13
-function tabsSwipeCtrlFn13() {
-    var responsive = this;
-    responsive.ngIncludeTemplates = [
-      {
-        index: 0,
-        name: 'first',
-        url: 'html/templates/hex/hex13Image.html'
-      },
-      {
-        index: 1,
-        name: 'second',
-        url: 'html/templates/hex/hex13Content.html'
-      },
-    ];
-
-    responsive.selectPage = selectPage;
-
-    /**
-    * Initialize with the first page opened
-    */
-    responsive.ngIncludeSelected = responsive.ngIncludeTemplates[0];
-
-    function selectPage(indexSelected) {
-        if (responsive.ngIncludeTemplates[indexSelected].index > responsive.ngIncludeSelected.index) {
-            responsive.moveToLeft = false;
-        } else {
-            responsive.moveToLeft = true;
-        }
-        responsive.ngIncludeSelected = responsive.ngIncludeTemplates[indexSelected];
-    }
-}
-
-angular.module('myApp')
-    .controller('hex13Ctrl', tabsSwipeCtrlFn13);
-
-// HEX CTRL 1
-function tabsSwipeCtrlFn1() {
-    var responsive = this;
-    responsive.ngIncludeTemplates = [{
-      index: 0,
-      name: 'first',
-      url: 'html/templates/hex/hex1Image.html'
-    },
-      {
-        index: 1,
-        name: 'second',
-        url: 'html/templates/hex/hex1Content.html'
-      }
-    ];
-
-    responsive.selectPage = selectPage;
-
-    /**
-    * Initialize with the first page opened
-    */
-    responsive.ngIncludeSelected = responsive.ngIncludeTemplates[0];
-
-    function selectPage(indexSelected) {
-        if (responsive.ngIncludeTemplates[indexSelected].index > responsive.ngIncludeSelected.index) {
-            responsive.moveToLeft = false;
-        } else {
-            responsive.moveToLeft = true;
-        }
-        responsive.ngIncludeSelected = responsive.ngIncludeTemplates[indexSelected];
-    }
-}
-
-angular.module('myApp')
-    .controller('hex1Ctrl', tabsSwipeCtrlFn1);
-
-// HEX CTRL 2
-function tabsSwipeCtrlFn2() {
-    var responsive = this;
-    responsive.ngIncludeTemplates = [
-      {
-        index: 0,
-        name: 'first',
-        url: 'html/templates/hex/hex2Image.html'
-      },
-      {
-        index: 1,
-        name: 'second',
-        url: 'html/templates/hex/hex2Content.html'
-      },
-    ];
-
-    responsive.selectPage = selectPage;
-
-    /**
-    * Initialize with the first page opened
-    */
-    responsive.ngIncludeSelected = responsive.ngIncludeTemplates[0];
-
-    function selectPage(indexSelected) {
-        if (responsive.ngIncludeTemplates[indexSelected].index > responsive.ngIncludeSelected.index) {
-            responsive.moveToLeft = false;
-        } else {
-            responsive.moveToLeft = true;
-        }
-        responsive.ngIncludeSelected = responsive.ngIncludeTemplates[indexSelected];
-    }
-}
-
-angular.module('myApp')
-    .controller('hex2Ctrl', tabsSwipeCtrlFn2);
-
-// HEX CTRL 3
-function tabsSwipeCtrlFn3() {
-    var responsive = this;
-    responsive.ngIncludeTemplates = [
-      {
-        index: 0,
-        name: 'first',
-        url: 'html/templates/hex/hex3Image.html'
-      },
-      {
-        index: 1,
-        name: 'second',
-        url: 'html/templates/hex/hex3Content.html'
-      },
-    ];
-
-    responsive.selectPage = selectPage;
-
-    /**
-    * Initialize with the first page opened
-    */
-    responsive.ngIncludeSelected = responsive.ngIncludeTemplates[0];
-
-    function selectPage(indexSelected) {
-        if (responsive.ngIncludeTemplates[indexSelected].index > responsive.ngIncludeSelected.index) {
-            responsive.moveToLeft = false;
-        } else {
-            responsive.moveToLeft = true;
-        }
-        responsive.ngIncludeSelected = responsive.ngIncludeTemplates[indexSelected];
-    }
-}
-
-angular.module('myApp')
-    .controller('hex3Ctrl', tabsSwipeCtrlFn3);
-
-// HEX CTRL 4
-function tabsSwipeCtrlFn4() {
-    var responsive = this;
-    responsive.ngIncludeTemplates = [
-      {
-        index: 0,
-        name: 'first',
-        url: 'html/templates/hex/hex4Image.html'
-      },
-      {
-        index: 1,
-        name: 'second',
-        url: 'html/templates/hex/hex4Content.html'
-      },
-    ];
-
-    responsive.selectPage = selectPage;
-
-    /**
-    * Initialize with the first page opened
-    */
-    responsive.ngIncludeSelected = responsive.ngIncludeTemplates[0];
-
-    function selectPage(indexSelected) {
-        if (responsive.ngIncludeTemplates[indexSelected].index > responsive.ngIncludeSelected.index) {
-            responsive.moveToLeft = false;
-        } else {
-            responsive.moveToLeft = true;
-        }
-        responsive.ngIncludeSelected = responsive.ngIncludeTemplates[indexSelected];
-    }
-}
-
-angular.module('myApp')
-    .controller('hex4Ctrl', tabsSwipeCtrlFn4);
-
-// HEX CTRL 5
-function tabsSwipeCtrlFn5() {
-    var responsive = this;
-    responsive.ngIncludeTemplates = [
-      {
-        index: 0,
-        name: 'first',
-        url: 'html/templates/hex/hex5Image.html'
-      },
-      {
-        index: 1,
-        name: 'second',
-        url: 'html/templates/hex/hex5Content.html'
-      },
-    ];
-
-    responsive.selectPage = selectPage;
-
-    /**
-    * Initialize with the first page opened
-    */
-    responsive.ngIncludeSelected = responsive.ngIncludeTemplates[0];
-
-    function selectPage(indexSelected) {
-        if (responsive.ngIncludeTemplates[indexSelected].index > responsive.ngIncludeSelected.index) {
-            responsive.moveToLeft = false;
-        } else {
-            responsive.moveToLeft = true;
-        }
-        responsive.ngIncludeSelected = responsive.ngIncludeTemplates[indexSelected];
-    }
-}
-
-angular.module('myApp')
-    .controller('hex5Ctrl', tabsSwipeCtrlFn5);
-
-// HEX CTRL 6
-function tabsSwipeCtrlFn6() {
-    var responsive = this;
-    responsive.ngIncludeTemplates = [
-      {
-        index: 0,
-        name: 'first',
-        url: 'html/templates/hex/hex6Image.html'
-      },
-      {
-        index: 1,
-        name: 'second',
-        url: 'html/templates/hex/hex6Content.html'
-      },
-    ];
-
-    responsive.selectPage = selectPage;
-
-    /**
-    * Initialize with the first page opened
-    */
-    responsive.ngIncludeSelected = responsive.ngIncludeTemplates[0];
-
-    function selectPage(indexSelected) {
-        if (responsive.ngIncludeTemplates[indexSelected].index > responsive.ngIncludeSelected.index) {
-            responsive.moveToLeft = false;
-        } else {
-            responsive.moveToLeft = true;
-        }
-        responsive.ngIncludeSelected = responsive.ngIncludeTemplates[indexSelected];
-    }
-}
-
-angular.module('myApp')
-    .controller('hex6Ctrl', tabsSwipeCtrlFn6);
-
-// HEX CTRL 7
-function tabsSwipeCtrlFn7() {
-    var responsive = this;
-    responsive.ngIncludeTemplates = [
-      {
-        index: 0,
-        name: 'first',
-        url: 'html/templates/hex/hex7Image.html'
-      },
-      {
-        index: 1,
-        name: 'second',
-        url: 'html/templates/hex/hex7Content.html'
-      },
-    ];
-
-    responsive.selectPage = selectPage;
-
-    /**
-    * Initialize with the first page opened
-    */
-    responsive.ngIncludeSelected = responsive.ngIncludeTemplates[0];
-
-    function selectPage(indexSelected) {
-        if (responsive.ngIncludeTemplates[indexSelected].index > responsive.ngIncludeSelected.index) {
-            responsive.moveToLeft = false;
-        } else {
-            responsive.moveToLeft = true;
-        }
-        responsive.ngIncludeSelected = responsive.ngIncludeTemplates[indexSelected];
-    }
-}
-
-angular.module('myApp')
-    .controller('hex7Ctrl', tabsSwipeCtrlFn7);
-
-// HEX CTRL 8
-function tabsSwipeCtrlFn8() {
-    var responsive = this;
-    responsive.ngIncludeTemplates = [
-      {
-        index: 0,
-        name: 'first',
-        url: 'html/templates/hex/hex8Image.html'
-      },
-      {
-        index: 1,
-        name: 'second',
-        url: 'html/templates/hex/hex8Content.html'
-      },
-    ];
-
-    responsive.selectPage = selectPage;
-
-    /**
-    * Initialize with the first page opened
-    */
-    responsive.ngIncludeSelected = responsive.ngIncludeTemplates[0];
-
-    function selectPage(indexSelected) {
-        if (responsive.ngIncludeTemplates[indexSelected].index > responsive.ngIncludeSelected.index) {
-            responsive.moveToLeft = false;
-        } else {
-            responsive.moveToLeft = true;
-        }
-        responsive.ngIncludeSelected = responsive.ngIncludeTemplates[indexSelected];
-    }
-}
-
-angular.module('myApp')
-    .controller('hex8Ctrl', tabsSwipeCtrlFn8);
-
-// HEX CTRL 9
-function tabsSwipeCtrlFn9() {
-    var responsive = this;
-    responsive.ngIncludeTemplates = [
-      {
-        index: 0,
-        name: 'first',
-        url: 'html/templates/hex/hex9Image.html'
-      },
-      {
-        index: 1,
-        name: 'second',
-        url: 'html/templates/hex/hex9Content.html'
-      },
-    ];
-
-    responsive.selectPage = selectPage;
-
-    /**
-    * Initialize with the first page opened
-    */
-    responsive.ngIncludeSelected = responsive.ngIncludeTemplates[0];
-
-    function selectPage(indexSelected) {
-        if (responsive.ngIncludeTemplates[indexSelected].index > responsive.ngIncludeSelected.index) {
-            responsive.moveToLeft = false;
-        } else {
-            responsive.moveToLeft = true;
-        }
-        responsive.ngIncludeSelected = responsive.ngIncludeTemplates[indexSelected];
-    }
-}
-
-angular.module('myApp')
-    .controller('hex9Ctrl', tabsSwipeCtrlFn9);
