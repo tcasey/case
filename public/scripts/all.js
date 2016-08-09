@@ -76,6 +76,10 @@ angular.module('myApp', ['ui.router', 'ngAnimate', 'ngTouch'])
     url: '/projects/memory',
     templateUrl: 'html/templates/hex/hex13Content.html',
  })
+ .state('nerd',{
+    url: '/projects/nerd',
+    templateUrl: 'html/templates/hex/hex14Content.html',
+ })
 
  .state('waka',{
 		 url: '/waka',
@@ -88,12 +92,9 @@ angular.module('myApp', ['ui.router', 'ngAnimate', 'ngTouch'])
 angular.module('myApp')
   .directive('tcFooter', function() {
     return {
+      scope: {},
       restrict: 'E',
-      templateUrl: 'html/templates/footer.html',
-      scope: {
-        text: "@"
-      }
-
+      templateUrl: 'html/templates/footer.html'
     };
   });
 

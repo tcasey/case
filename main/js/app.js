@@ -76,6 +76,10 @@ angular.module('myApp', ['ui.router', 'ngAnimate', 'ngTouch'])
     url: '/projects/memory',
     templateUrl: 'html/templates/hex/hex13Content.html',
  })
+ .state('nerd',{
+    url: '/projects/nerd',
+    templateUrl: 'html/templates/hex/hex14Content.html',
+ })
 
  .state('waka',{
 		 url: '/waka',

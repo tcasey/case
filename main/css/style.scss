@@ -455,13 +455,6 @@ h1 small {
 /*--------------------------
       hex stuff
 ---------------------------- */
-
-.hexContent svg {
-  fill: #8fb9ff; }
-
-.hexContent svg:hover {
-  fill: #8795b0; }
-
 .hex {
   position: relative;
   list-style-type: none;
@@ -516,7 +509,7 @@ h1 small {
   width: 255px;
   height: 140px; }
 
-.portfolio svg {
+.nerd svg {
   height: 150px;
   top: 45px;
   width: 150px; }
