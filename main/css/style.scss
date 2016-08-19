@@ -398,57 +398,63 @@ h1 small {
   font-family: 'Quicksand', sans-serif;
   font-size: 0.8em; }
 
-.swipe {
-  /*position: inherit;*/
-  top: 0;
-  width: 150px;
-  height: 120px;
-  right: inherit;
-  bottom: inherit;
-  left: inherit; }
+.project-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-intro {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0 40px 40px 40px;
+  line-height: 23px;
+  text-align: -webkit-center;
+}
+
+.project-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0 40px 40px 40px;
+  line-height: 23px;
+}
+
+.project-details h3, .project-images h3 {
+  padding: 5px;
+}
+
+.project-details ul {
+  list-style: none;
+  text-align: -webkit-center;
+  padding: 0;
+  margin: 0;
+}
+
+.project-images img {
+  margin: 1em 0 1em 0;
+}
+
+.project-description .logoLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  margin: 2em;
+}
+
+.project-description .checkItOut {
+  align-self: center;
+  color: #bdb380;
+}
 
 /*--------------------------
       hex stuff
 ---------------------------- */
-.hexContent {
-  width: 100%;
-  height: 100%;
-  padding: 1em;
-  background: #f2f2f2;
-  line-height: normal;
-  list-style: none;
-  cursor: grabbing;
-  cursor: -webkit-grabbing; }
-
-.hexContent h2 {
-  position: relative; }
-
-.hexContent span {
-  font-size: 1.2em;
-  font-weight: 600;
-  line-height: 1px;
-  text-align: justify;
-  color: #bdb380;
-  /*margin: 1px;*/
-  /*padding: 7px;*/
-  top: 1em;
-  position: relative;
-  height: 100px;
-  width: 100px; }
-
-.hexContent .git-link {
-  position: relative;
-  cursor: pointer;
-  cursor: -webkit-grabbing;
-  top: 1.7em;
-  margin-right: 2em; }
-
-.hexContent svg {
-  fill: #8fb9ff; }
-
-.hexContent svg:hover {
-  fill: #8795b0; }
-
 .hex {
   position: relative;
   list-style-type: none;
@@ -486,8 +492,8 @@ h1 small {
   width: 100%;
   height: 100%;
   /*padding: 2em;*/
-  cursor: grabbing;
-  cursor: -webkit-grabbing; }
+  cursor: pointer;;
+  cursor: -webkit-pointer; }
 
 .hexImage svg {
   left: -100%;
@@ -499,11 +505,11 @@ h1 small {
 
 .iMac svg {
   left: -105%;
-  top: 10px;
+  top: 15%;
   width: 255px;
   height: 140px; }
 
-.portfolio svg {
+.nerd svg {
   height: 150px;
   top: 45px;
   width: 150px; }
@@ -519,7 +525,7 @@ h1 small {
 
 .fizz-buzz svg {
   height: 140px;
-  top: 10%;
+  top: 15%;
   width: 140px; }
 
 .memory svg {
@@ -1077,7 +1083,6 @@ h1 small {
 #linkedin, #email, #github, #twitter {
   width: 24px;
   height: 24px; }
-
 /*-----------------------------------
         media queries
 ------------------------------------- */

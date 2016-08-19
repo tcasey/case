@@ -1,5 +1,5 @@
-<div id="menu-wrapper">
-  <div id="icon-wrap-2" class="icon-wrap">
+<div id="menu-wrapper" onClick="ga('send', 'event', { eventCategory: 'Menu', eventAction: 'Navigation', eventLabel: 'Open Mobile Nav'});">
+  <div id="icon-wrap-2" class="icon-wrap" onClick="ga('send', 'event', { eventCategory: 'Menu', eventAction: 'Navigation', eventLabel: 'Open Mobile Nav'});">
 
     <svg width="70" height="50" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 524.5 2000 2000.5" enable-background="new 0 524.5 2000 2000.5" xml:space="preserve">
 
@@ -22,12 +22,12 @@
   </div>
 
   <ul class="menu-nav">
-    <a ui-sref="home">
+    <a ui-sref="home" onClick="ga('send', 'event', { eventCategory: 'Menu', eventAction: 'Navigation', eventLabel: 'Home from Nav'});">
       <li id="menu-home">
         home
       </li>
     </a>
-    <a ui-sref="bio">
+    <a ui-sref="bio" onClick="ga('send', 'event', { eventCategory: 'Menu', eventAction: 'Navigation', eventLabel: 'Bio from Nav'});">
       <li id="menu-bio">
         bio
       </li>
@@ -35,12 +35,12 @@
     <!-- <li>
       <a ui-sref="waka">waka</a>
     </li> -->
-    <a ui-sref="projects">
+    <a ui-sref="projects" onClick="ga('send', 'event', { eventCategory: 'Menu', eventAction: 'Navigation', eventLabel: 'Projects from Nav'});">
       <li id="menu-projects">
         projects
       </li>
     </a>
-    <a ui-sref="skills">
+    <a ui-sref="skills" onClick="ga('send', 'event', { eventCategory: 'Menu', eventAction: 'Navigation', eventLabel: 'Skills from Nav'});">
       <li id="menu-skills">
         skills
       </li>
