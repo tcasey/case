@@ -1,4 +1,4 @@
-angular.module('myApp', ['ui.router'])
+angular.module('myApp', ['ui.router', 'sap.imageloader'])
 
 .config(function($urlRouterProvider, $stateProvider, $locationProvider){
 
