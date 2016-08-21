@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
     styles = require('gulp-sass'),
     concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
+    // uglify = require('gulp-uglify'),
     uglifycss = require('gulp-uglifycss'),
     ngAnnotate = require('gulp-ng-annotate'),
     watcher = gulp.watch(['./main/**/*.js', './main/css/*.scss', './main/**/*.html'], ['default']);
@@ -14,7 +14,7 @@ watcher.on('change', function(event) {
 gulp.task('styles', function() { // .scss is newer file version of .sass
   return gulp.src('./main/**/*.scss')
     .pipe(styles())
-    .pipe(uglifycss())
+    // .pipe(uglifycss())
     .pipe(concat('style.css'))
     .pipe(gulp.dest('./docs/styles'))
 });
@@ -22,7 +22,7 @@ gulp.task('styles', function() { // .scss is newer file version of .sass
 gulp.task('javascript', function() {
   return gulp.src(['./main/**/*.js'])
     .pipe(ngAnnotate())
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(concat('all.js'))
     .pipe(gulp.dest('./docs/scripts'))
 });
@@ -30,7 +30,7 @@ gulp.task('javascript', function() {
 gulp.task('vendor', function() {
   return gulp.src(['./node_modules/image-loader-angular/js/image-loader.js'])
     .pipe(ngAnnotate())
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(concat('vendor.js'))
     .pipe(gulp.dest('./docs/scripts'))
 });

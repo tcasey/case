@@ -498,6 +498,13 @@ h1 small {
 .hexImage svg {
   left: -100%;
   right: -100%;
+  width: 140px;
+  height: 80px;
+  margin: 0 auto; }
+
+.hexImage .svg {
+  left: -100%;
+  right: -100%;
   top: 30%;
   width: 140px;
   height: 80px;
@@ -505,32 +512,28 @@ h1 small {
 
 .iMac svg {
   left: -105%;
-  top: 15%;
+  top: -25%;
   width: 255px;
   height: 140px; }
 
 .nerd svg {
-  height: 150px;
-  top: 45px;
-  width: 150px; }
-
-.smart-shopper svg {
-  height: 100px;
-  top: 20%; }
+  height: 120px;
+  top: -25%;
+  width: 120px; }
 
 .street-fighter svg {
   height: 120px;
-  top: 35px;
+  top: -25%;
   width: 150px; }
 
 .fizz-buzz svg {
   height: 140px;
-  top: 15%;
+  top: -25%;
   width: 140px; }
 
 .memory svg {
   height: 100px;
-  top: 20%;
+  top: -15%;
   width: 100px; }
 
 /*-----------------------------------
@@ -627,9 +630,15 @@ h1 small {
     font-weight: 600;
     line-height: 20px;
     top: 4em; }
+    
   .hexContent svg {
     top: 6em;
     margin-right: 2em; }
+
+    .hexContent .svg {
+      top: 6em;
+      margin-right: 2em; }
+
   /* <- 5-4  hexagons per row */
   .hex {
     width: 19.2%;
@@ -665,6 +674,10 @@ h1 small {
   .hexContent svg {
     top: 4em;
     margin-right: 2em; }
+
+    .hexContent .svg {
+      top: 4em;
+      margin-right: 2em; }
   /* <- 5-4  hexagons per row */
   .hex {
     width: 19.2%;
@@ -698,6 +711,9 @@ h1 small {
     top: 4em; }
   .hexContent svg {
     top: 5em; }
+
+    .hexContent .svg {
+      top: 5em; }
   /* <- 4-3  hexagons per row */
   .hex {
     width: 24.25%;
@@ -730,10 +746,10 @@ h1 small {
     line-height: 1px;
     top: 3em; }
   .hexContent svg {
-    top: 2em;
-    /* bug fixish in mozilla */
-    /*margin-top: 5em;
-    margin-left: -4em;*/ }
+    top: 2em;}
+
+    .hexContent .svg {
+      top: 2em;}
   /* <- 3-2  hexagons per row */
   .hex {
     width: 32.666%;
@@ -765,6 +781,9 @@ h1 small {
     top: 1.8em; }
   .hexContent svg {
     top: 0.5em; }
+
+    .hexContent .svg {
+      top: 0.5em; }
   /* <- 2-1  hexagons per row */
   .hex {
     width: 49.5%;
