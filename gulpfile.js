@@ -16,7 +16,7 @@ gulp.task('styles', function() { // .scss is newer file version of .sass
     .pipe(styles())
     .pipe(uglifycss())
     .pipe(concat('style.css'))
-    .pipe(gulp.dest('./public/styles'))
+    .pipe(gulp.dest('./docs/styles'))
 });
 
 gulp.task('javascript', function() {
@@ -24,7 +24,7 @@ gulp.task('javascript', function() {
     .pipe(ngAnnotate())
     .pipe(uglify())
     .pipe(concat('all.js'))
-    .pipe(gulp.dest('./public/scripts'))
+    .pipe(gulp.dest('./docs/scripts'))
 });
 
 gulp.task('vendor', function() {
@@ -32,13 +32,13 @@ gulp.task('vendor', function() {
     .pipe(ngAnnotate())
     .pipe(uglify())
     .pipe(concat('vendor.js'))
-    .pipe(gulp.dest('./public/scripts'))
+    .pipe(gulp.dest('./docs/scripts'))
 });
 
 gulp.task('html', function() {
   return gulp.src('./main/**/*.html')
     // .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('./public/html'))
+    .pipe(gulp.dest('./docs/html'))
 });
 
 
