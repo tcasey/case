@@ -6,7 +6,7 @@ angular.module('myApp', ['ui.router', 'sap.imageloader'])
   .otherwise('home');
 
  $stateProvider
-
+ 
  .state('home', {
 		 url: '/home',
 		 templateUrl: 'html/templates/home.html',

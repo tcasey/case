@@ -61,10 +61,11 @@ h1 small {
   display: flex;
   justify-content: space-around;
   text-decoration: none;
+  font-size: 1.1em;
   color: #bdb380; }
 
 #bio-page, #projects-page, #skillset-page {
-  padding: 10px 0; }
+  padding: 15px 0; }
 
 #menu-home, #menu-bio, #menu-projects, #menu-skills {
   display: flex;
