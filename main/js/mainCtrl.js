@@ -1,6 +1,6 @@
 angular.module('myApp')
   .controller('mainCtrl', ['$scope', 'ImageLoader', function($scope, ImageLoader) {
-    
+
     $('#icon-wrap-2').click(function() {
       if ($('#icon-wrap-2').hasClass('toClose')) {
         $('#icon-wrap-2').removeClass('toClose').addClass('toOpen');
