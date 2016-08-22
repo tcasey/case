@@ -47,7 +47,7 @@ h1 small {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center; }
-
+  
 .nav--main {
   background-color: #f2f2f2;
   color: #bdb380;
@@ -61,10 +61,11 @@ h1 small {
   display: flex;
   justify-content: space-around;
   text-decoration: none;
+  font-size: 1.1em;
   color: #bdb380; }
 
 #bio-page, #projects-page, #skillset-page {
-  padding: 10px 0; }
+  padding: 15px 0; }
 
 #menu-home, #menu-bio, #menu-projects, #menu-skills {
   display: flex;
@@ -630,7 +631,7 @@ h1 small {
     font-weight: 600;
     line-height: 20px;
     top: 4em; }
-    
+
   .hexContent svg {
     top: 6em;
     margin-right: 2em; }

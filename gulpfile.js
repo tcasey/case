@@ -11,7 +11,7 @@ watcher.on('change', function(event) {
 });
 //browser sync to get live server like features with gulp
 
-gulp.task('styles', function() { // .scss is newer file version of .sass
+gulp.task('styles', function() {
   return gulp.src('./main/**/*.scss')
     .pipe(styles())
     // .pipe(uglifycss())
