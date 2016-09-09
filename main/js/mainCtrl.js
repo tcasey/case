@@ -101,10 +101,6 @@ angular.module('myApp')
       ImageLoader.loadImage(ryu_img_1).then(function(loadedSrc) {
       $scope.ryu1 = loadedSrc;
     });
-  var ryu_img_2 = 'web-img/portfolio/street-fighter/pose.png';
-      ImageLoader.loadImage(ryu_img_2).then(function(loadedSrc) {
-      $scope.ryu2 = loadedSrc;
-    });
   var ryu_img_3 = 'web-img/portfolio/street-fighter/hadouken.png';
       ImageLoader.loadImage(ryu_img_3).then(function(loadedSrc) {
       $scope.ryu3 = loadedSrc;
@@ -162,5 +158,18 @@ angular.module('myApp')
         ImageLoader.loadImage(pre_img_4).then(function(loadedSrc) {
         $scope.pre4 = loadedSrc;
       });
+      // hex 15 images
+      var material_img_1 = 'web-img/portfolio/material/all.png';
+          ImageLoader.loadImage(material_img_1).then(function(loadedSrc) {
+          $scope.material1 = loadedSrc;
+        });
+      var material_img_2 = 'web-img/portfolio/material/active.png';
+          ImageLoader.loadImage(material_img_2).then(function(loadedSrc) {
+          $scope.material2 = loadedSrc;
+        });
+      var material_img_3 = 'web-img/portfolio/material/completed.png';
+          ImageLoader.loadImage(material_img_3).then(function(loadedSrc) {
+          $scope.material3 = loadedSrc;
+        });
 
 }]);

@@ -102,6 +102,11 @@ angular.module('myApp', ['ui.router', 'sap.imageloader'])
     templateUrl: 'html/templates/hex/hex14Content.html',
     onEnter: scrollContent
  })
+ .state('react-material',{
+    url: '/projects/react-material',
+    templateUrl: 'html/templates/hex/hex15Content.html',
+    onEnter: scrollContent
+ })
 
  .state('waka',{
 		 url: '/waka',
@@ -237,10 +242,6 @@ angular.module('myApp')
       ImageLoader.loadImage(ryu_img_1).then(function(loadedSrc) {
       $scope.ryu1 = loadedSrc;
     });
-  var ryu_img_2 = 'web-img/portfolio/street-fighter/pose.png';
-      ImageLoader.loadImage(ryu_img_2).then(function(loadedSrc) {
-      $scope.ryu2 = loadedSrc;
-    });
   var ryu_img_3 = 'web-img/portfolio/street-fighter/hadouken.png';
       ImageLoader.loadImage(ryu_img_3).then(function(loadedSrc) {
       $scope.ryu3 = loadedSrc;
@@ -298,6 +299,19 @@ angular.module('myApp')
         ImageLoader.loadImage(pre_img_4).then(function(loadedSrc) {
         $scope.pre4 = loadedSrc;
       });
+      // hex 15 images
+      var material_img_1 = 'web-img/portfolio/material/all.png';
+          ImageLoader.loadImage(material_img_1).then(function(loadedSrc) {
+          $scope.material1 = loadedSrc;
+        });
+      var material_img_2 = 'web-img/portfolio/material/active.png';
+          ImageLoader.loadImage(material_img_2).then(function(loadedSrc) {
+          $scope.material2 = loadedSrc;
+        });
+      var material_img_3 = 'web-img/portfolio/material/completed.png';
+          ImageLoader.loadImage(material_img_3).then(function(loadedSrc) {
+          $scope.material3 = loadedSrc;
+        });
 
 }]);
 
@@ -742,6 +756,14 @@ angular.module('myApp')
     return {
       restrict: 'E',
       template: '<svg x="0px" y="0px" width="144px" height="216px" viewBox="0 0 144 216" style="enable-background:new 0 0 144 216;"xml:space="preserve"><style type="text/css">.style4 {fill: #f15a29;}</style><defs></defs><path class="style4" d="M126.1,212.9c4.1,4.1,10.7,4.1,14.8,0c4.1-4.1,4.1-10.7,0-14.8l-28.6-28.6l18.1-18.1c8.4-8.4,13.6-20,13.6-32.9C144,92.8,123.2,72,97.5,72S51,92.8,51,118.5c0,12.8,5.2,24.5,13.6,32.9l0,0l18.1,18.1l-18.1,18.1c-4.6,4.6-11,7.5-18.1,7.5c-14.1,0-25.6-11.5-25.6-25.6v-159C20.9,4.7,16.2,0,10.5,0C4.7,0,0,4.7,0,10.5v159C0,195.2,20.8,216,46.5,216c12.8,0,24.5-5.2,32.9-13.6l18.1-18.1L126.1,212.9z M79.4,136.6c-4.6-4.6-7.5-11-7.5-18.1c0-14.1,11.5-25.6,25.6-25.6s25.6,11.5,25.6,25.6c0,7.1-2.9,13.5-7.5,18.1l0,0l-18.1,18.1L79.4,136.6z"/></svg>'
+    };
+  });
+
+angular.module('myApp')
+  .directive('svgMaterial', function() {
+    return {
+      restrict: 'E',
+      template: '  <svg width="332px" height="359px" viewBox="-285 -402 332 359" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><ellipse id="path-1" cx="166.013348" cy="179.598663" rx="71" ry="165.5"></ellipse><mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="142" height="331" fill="white"><use xlink:href="#path-1"></use></mask><ellipse id="path-3" cx="166.013348" cy="179.598663" rx="71" ry="165.5"></ellipse><mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="142" height="331" fill="white"><use xlink:href="#path-3"></use></mask><ellipse id="path-5" cx="166.013348" cy="179.598663" rx="71" ry="165.5"></ellipse><mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="142" height="331" fill="white"><use xlink:href="#path-5"></use></mask></defs><g id="React" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-285.000000, -402.000000)"><use id="Oval" stroke="#5ADAFD" mask="url(#mask-2)" stroke-width="36" transform="translate(166.013348, 179.598663) rotate(-30.000000) translate(-166.013348, -179.598663) " xlink:href="#path-1"></use><use id="Oval" stroke="#5ADAFD" mask="url(#mask-4)" stroke-width="36" transform="translate(166.013348, 179.598663) rotate(90.000000) translate(-166.013348, -179.598663) " xlink:href="#path-3"></use><use id="Oval" stroke="#5ADAFD" mask="url(#mask-6)" stroke-width="36" transform="translate(166.013348, 179.598663) rotate(30.000000) translate(-166.013348, -179.598663) " xlink:href="#path-5"></use><circle id="Oval-2" fill="#5ADAFD" cx="166.5" cy="179.5" r="28.5"></circle></g></svg>'
     };
   });
 

@@ -102,6 +102,11 @@ angular.module('myApp', ['ui.router', 'sap.imageloader'])
     templateUrl: 'html/templates/hex/hex14Content.html',
     onEnter: scrollContent
  })
+ .state('react-material',{
+    url: '/projects/react-material',
+    templateUrl: 'html/templates/hex/hex15Content.html',
+    onEnter: scrollContent
+ })
 
  .state('waka',{
 		 url: '/waka',
