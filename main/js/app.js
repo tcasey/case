@@ -1,6 +1,9 @@
 angular.module('myApp', ['ui.router', 'sap.imageloader'])
 
-.config(function($urlRouterProvider, $stateProvider, $locationProvider){
+.config(function($urlRouterProvider, $stateProvider, $locationProvider, $httpProvider){
+
+  //Enable cross domain calls
+   $httpProvider.defaults.useXDomain = true;
 
   var scrollContent = function() {
      window.scrollTo(0, 0);

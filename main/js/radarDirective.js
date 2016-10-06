@@ -38,10 +38,10 @@ angular.module('myApp')
            {axis:"JavaScript",value:0.76},
            {axis:"CSS3",value:1},
            {axis:"D3",value:0.68},
-           {axis:"HTML5",value:0.91},
-           {axis:"Node",value:0.51},
+           {axis:"HTML5",value:0.96},
+           {axis:"Node",value:0.61},
            {axis:"jQuery",value:0.80},
-           {axis:"React",value:0.50}
+           {axis:"React",value:0.68}
            ]
          ];
      function RadarChart(id, data, options) {

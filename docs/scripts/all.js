@@ -1,6 +1,9 @@
 angular.module('myApp', ['ui.router', 'sap.imageloader'])
 
-.config(["$urlRouterProvider", "$stateProvider", "$locationProvider", function($urlRouterProvider, $stateProvider, $locationProvider){
+.config(["$urlRouterProvider", "$stateProvider", "$locationProvider", "$httpProvider", function($urlRouterProvider, $stateProvider, $locationProvider, $httpProvider){
+
+  //Enable cross domain calls
+   $httpProvider.defaults.useXDomain = true;
 
   var scrollContent = function() {
      window.scrollTo(0, 0);
@@ -369,10 +372,10 @@ angular.module('myApp')
            {axis:"JavaScript",value:0.76},
            {axis:"CSS3",value:1},
            {axis:"D3",value:0.68},
-           {axis:"HTML5",value:0.91},
-           {axis:"Node",value:0.51},
+           {axis:"HTML5",value:0.96},
+           {axis:"Node",value:0.61},
            {axis:"jQuery",value:0.80},
-           {axis:"React",value:0.50}
+           {axis:"React",value:0.68}
            ]
          ];
      function RadarChart(id, data, options) {
@@ -687,13 +690,16 @@ angular.module('myApp')
 angular.module('myApp')
   .service('wakaService', ["$http", function($http){
 
-  var baseUrl = 'https://wakatime.com/api/v1/users/current/stats/last_7_days?api_key=1183f7db-a10f-465e-863c-ac6518941a6f';
+  var key = '1183f7db-a10f-465e-863c-ac6518941a6f'
+  var baseUrl = 'https://wakatime.com/api/v1/users/current/stats/last_7_days?api_key=' + key;
 
     this.getWaka = function() {
       return $http({
         method: 'GET',
         url: baseUrl,
-
+        headers: {
+            'Content-Type': 'application/json; charset=utf-8'
+        }
       })
       .then(function (response) {
         console.log(response);
