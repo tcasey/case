@@ -1,1 +1,87 @@
-angular.module("sap.imageloader",[]).factory("ImageLoader",["$q",function(e){return{loadImages:function(r,a){a="undefined"!=typeof a?a:"src";try{var t=[];if(!Array.isArray(r))throw new TypeError("No image list provided");for(var o=0;o<r.length;o++){var n=this.loadImage(r[o],a);t.push(n)}return e.all(t)}catch(c){console.error(c)}},loadImage:function(r,a){a="undefined"!=typeof a?a:"src";var t=e.defer(),o=new Image;o.onload=function(){"object"==typeof r?r[a]=o.src:"string"==typeof r&&(r=o.src),t.resolve(r)};try{if("object"==typeof r)o.src=r[a];else{if("string"!=typeof r)throw new TypeError("No image provided");o.src=r}}catch(n){t.reject(n),console.error(n)}return t.promise}}}]).directive("loadedImage",["ImageLoader",function(e){return{scope:{src:"&src"},link:function(e,r,a){var t=new Image;for(attributeName in a)"src"!==attributeName&&("class"===attributeName?t.className=a["class"]:t[attributeName]=a[attributeName]);t.onload=function(){r.append(t)},t.src=e.src()}}}]);
+/*!
+ * Image Loader Angular v1.1.0
+ * (c) 2016 Sepehr Amoor Pour
+ * Released under the MIT License.
+ */
+angular.module('sap.imageloader', [])
+
+.factory('ImageLoader', ['$q', function($q){
+	return {
+		loadImages: function (images, srcProperty) {
+			srcProperty = typeof srcProperty !== "undefined" ? srcProperty : "src";
+			try {
+				var promises = [];
+				if (Array.isArray(images)) {
+					for (var i = 0; i < images.length; i++) {
+						var image = this.loadImage(images[i], srcProperty);
+						promises.push(image);
+					}
+				}
+				else {
+					throw new TypeError("No image list provided");
+				}
+				return $q.all(promises);
+			} catch(e) {
+				console.error(e);
+			};
+		},
+
+		loadImage: function(image, srcProperty) {
+			srcProperty = typeof srcProperty !== "undefined" ? srcProperty : "src";
+			var deferred = $q.defer();
+			var imageObject = new Image();
+
+			imageObject.onload = function() {
+				if (typeof image === "object") {
+					image[srcProperty] = imageObject.src;
+				}
+				else if (typeof image === "string") {
+					image = imageObject.src;
+				}
+				deferred.resolve(image);
+			};
+
+			try {
+				if (typeof image === "object") {
+					imageObject.src = image[srcProperty];
+				}
+				else if (typeof image === "string") {
+					imageObject.src = image;
+				}
+				else {
+					throw new TypeError("No image provided");
+				}
+			} catch(e) {
+				deferred.reject(e);
+				console.error(e);
+			};
+			return deferred.promise;
+		}
+	};
+}])
+
+.directive('loadedImage', ['ImageLoader', function(ImageLoader) {
+	return {
+		scope: {
+			src: '&src'
+		},
+		link: function(scope, element, attributes) {
+			var imageObject = new Image();
+			for (attributeName in attributes) {
+				if (attributeName !== 'src') {
+					if (attributeName === 'class') {
+						imageObject.className = attributes.class;
+					}
+					else {
+						imageObject[attributeName] = attributes[attributeName]
+					}
+				}
+			}
+			imageObject.onload = function() {
+				element.append(imageObject);
+			};
+
+			imageObject.src = scope.src();
+		}
+	}
+}]);

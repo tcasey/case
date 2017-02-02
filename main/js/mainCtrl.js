@@ -171,5 +171,13 @@ angular.module('myApp')
           ImageLoader.loadImage(material_img_3).then(function(loadedSrc) {
           $scope.material3 = loadedSrc;
         });
-
+        // office quiz images
+        var office_img_1 = 'web-img/portfolio/office/start.png';
+            ImageLoader.loadImage(office_img_1).then(function(loadedSrc) {
+            $scope.office1 = loadedSrc;
+          });
+        var office_img_2 = 'web-img/portfolio/office/end.png';
+            ImageLoader.loadImage(office_img_2).then(function(loadedSrc) {
+            $scope.office2 = loadedSrc;
+          });
 }]);

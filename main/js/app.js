@@ -110,6 +110,11 @@ angular.module('myApp', ['ui.router', 'sap.imageloader'])
     templateUrl: 'html/templates/hex/hex15Content.html',
     onEnter: scrollContent
  })
+ .state('office',{
+    url: '/projects/office-quiz',
+    templateUrl: 'html/templates/hex/officeQuiz.html',
+    onEnter: scrollContent
+ })
 
  .state('waka',{
 		 url: '/waka',
