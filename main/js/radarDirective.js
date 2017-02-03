@@ -30,24 +30,24 @@ angular.module('myApp')
      };
 
      var margin = {top: 100, right: 100, bottom: 100, left: 100},
-       width = Math.min(500, window.innerWidth - 10) - margin.left - margin.right,
+       width = Math.min(400, window.innerWidth - 10) - margin.left - margin.right,
        height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
      var data = [
-           [// JS Unit Lesson Tests
+           [
            {axis:"Angular",value:0.80},
            {axis:"JavaScript",value:0.76},
-           {axis:"CSS3",value:1},
+           {axis:"CSS3",value:0.9},
            {axis:"D3",value:0.68},
-           {axis:"HTML5",value:0.96},
-           {axis:"Node",value:0.61},
-           {axis:"jQuery",value:0.80},
-           {axis:"React",value:0.68}
+           {axis:"HTML5",value:1},
+           {axis:"Node",value:0.65},
+           {axis:"React",value:0.74},
+           {axis:"Express",value:0.65}
            ]
          ];
      function RadarChart(id, data, options) {
      	var chart = {
-     	 w: 230,				//Width of the circle
-     	 h: 230,				//Height of the circle
+     	 w: 200,				//Width of the circle
+     	 h: 200,				//Height of the circle
      	 margin: {top: 100, right: 100, bottom: 100, left: 100}, //The margins of the SVG
      	 levels: 3,				//How many levels or inner circles should there be drawn
      	 maxValue: 100, 			//What is the value that the biggest circle will represent

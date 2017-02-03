@@ -29,6 +29,12 @@ p {
   line-height: 23px;
   padding: 5px; }
 
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
 /*----------------------------
           nav/header
 ------------------------------ */
@@ -63,6 +69,15 @@ h1 small {
   text-decoration: none;
   font-size: 1.1em;
   color: #bdb380; }
+
+.project-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%; }
+
+.to-the-next-one {
+  cursor: pointer; }
 
 #bio-page, #projects-page, #skillset-page {
   padding: 15px 0; }
@@ -1108,6 +1123,10 @@ h1 small {
   #home {
     min-height: 78vh;
     padding: 100px; } }
+
+@media (min-width: 750px) {
+  .waka--content {
+    min-height: 76vh; } }
 
 /*@media (min-width: 750px) {
   .home {

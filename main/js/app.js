@@ -37,32 +37,32 @@ angular.module('myApp', ['ui.router', 'sap.imageloader'])
 
  .state('bike',{
     url: '/projects/road-bike-junkie',
-    templateUrl: 'html/templates/hex/hex1Content.html',
+    templateUrl: 'html/templates/hex/roadBike.html',
     onEnter: scrollContent
  })
  .state('h+c',{
     url: '/projects/h+c',
-    templateUrl: 'html/templates/hex/hex2Content.html',
+    templateUrl: 'html/templates/hex/hotCold.html',
     onEnter: scrollContent
  })
  .state('ncaa',{
     url: '/projects/ncaa',
-    templateUrl: 'html/templates/hex/hex3Content.html',
+    templateUrl: 'html/templates/hex/ncaa.html',
     onEnter: scrollContent
  })
  .state('karma',{
     url: '/projects/karma',
-    templateUrl: 'html/templates/hex/hex4Content.html',
+    templateUrl: 'html/templates/hex/karma.html',
     onEnter: scrollContent
  })
  .state('junior',{
     url: '/projects/junior',
-    templateUrl: 'html/templates/hex/hex5Content.html',
+    templateUrl: 'html/templates/hex/junior.html',
     onEnter: scrollContent
  })
  .state('do-it',{
     url: '/projects/do-it',
-    templateUrl: 'html/templates/hex/hex6Content.html',
+    templateUrl: 'html/templates/hex/doIt.html',
     onEnter: scrollContent
  })
  .state('smart-shopper',{
@@ -72,17 +72,17 @@ angular.module('myApp', ['ui.router', 'sap.imageloader'])
  })
  .state('twitter-clone',{
     url: '/projects/twitter-clone',
-    templateUrl: 'html/templates/hex/hex8Content.html',
+    templateUrl: 'html/templates/hex/twitterClone.html',
     onEnter: scrollContent
  })
  .state('hadouken',{
     url: '/projects/hadouken',
-    templateUrl: 'html/templates/hex/hex9Content.html',
+    templateUrl: 'html/templates/hex/hadouken.html',
     onEnter: scrollContent
  })
  .state('golf',{
     url: '/projects/golf',
-    templateUrl: 'html/templates/hex/hex10Content.html',
+    templateUrl: 'html/templates/hex/golf.html',
     onEnter: scrollContent
  })
  .state('fizz-buzz',{
@@ -92,22 +92,22 @@ angular.module('myApp', ['ui.router', 'sap.imageloader'])
  })
  .state('dots',{
     url: '/projects/dots',
-    templateUrl: 'html/templates/hex/hex12Content.html',
+    templateUrl: 'html/templates/hex/dots.html',
     onEnter: scrollContent
  })
  .state('memory',{
     url: '/projects/memory',
-    templateUrl: 'html/templates/hex/hex13Content.html',
+    templateUrl: 'html/templates/hex/memory.html',
     onEnter: scrollContent
  })
  .state('nerd',{
     url: '/projects/nerd',
-    templateUrl: 'html/templates/hex/hex14Content.html',
+    templateUrl: 'html/templates/hex/nerd.html',
     onEnter: scrollContent
  })
  .state('react-material',{
     url: '/projects/react-material',
-    templateUrl: 'html/templates/hex/hex15Content.html',
+    templateUrl: 'html/templates/hex/reactMaterial.html',
     onEnter: scrollContent
  })
  .state('office',{
