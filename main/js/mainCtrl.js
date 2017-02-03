@@ -86,11 +86,6 @@ angular.module('myApp')
       ImageLoader.loadImage(todo_img_1).then(function(loadedSrc) {
       $scope.todo1 = loadedSrc;
     });
-    // hex 7 images
-  var shopper_img_1 = 'web-img/portfolio/smart-shopper/shopper.png';
-      ImageLoader.loadImage(shopper_img_1).then(function(loadedSrc) {
-      $scope.shopper1 = loadedSrc;
-    });
     // hex 8 images
   var twitter_img_1 = 'web-img/portfolio/twitter-clone/app.png';
       ImageLoader.loadImage(twitter_img_1).then(function(loadedSrc) {
@@ -113,11 +108,6 @@ angular.module('myApp')
     var golf_img_2 = 'web-img/portfolio/golf/bio.png';
         ImageLoader.loadImage(golf_img_2).then(function(loadedSrc) {
         $scope.golf2 = loadedSrc;
-      });
-    // hex 11 images
-    var fizz_buzz_img = 'web-img/portfolio/fizz-buzz/app.png';
-        ImageLoader.loadImage(fizz_buzz_img).then(function(loadedSrc) {
-        $scope.imageSrc = loadedSrc;
       });
     // hex 12 images
     var dot_img = 'web-img/portfolio/dots/app.png';
