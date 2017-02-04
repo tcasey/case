@@ -377,8 +377,8 @@ angular.module('myApp').directive('bars', function() {
                         axis: "Angular",
                         value: 0.80
                     }, {
-                        axis: "JavaScript",
-                        value: 0.76
+                        axis: "React Native",
+                        value: 0.5
                     }, {
                         axis: "CSS3",
                         value: 0.9
@@ -395,8 +395,14 @@ angular.module('myApp').directive('bars', function() {
                         axis: "React",
                         value: 0.74
                     }, {
+                        axis: "JavaScript",
+                        value: 0.80
+                    }, {
                         axis: "Express",
                         value: 0.65
+                    }, {
+                        axis: "UX/UI",
+                        value: 0.9
                     }
                 ]
             ];
@@ -409,25 +415,18 @@ angular.module('myApp').directive('bars', function() {
                     ipad    = window.matchMedia("(min-width: 600px) and (max-width: 800px)")
 
                 var innerCircle
-                console.log('size: ', size);
 
                 if (i5.matches) {
-                    console.log('iphone 5')
                     innerCircle = 175
                 } else if (i6.matches) {
-                    console.log('iphone 6')
                     innerCircle = 200
                 } else if (i6plus.matches) {
-                    console.log('iphone 6 plus')
                     innerCircle = 250
                 } else if (phablet.matches) {
-                    console.log('phablet')
                     innerCircle = 300
                 } else if (ipad.matches) {
-                    console.log('ipad')
                     innerCircle = 370
                 } else {
-                    console.log('big')
                     innerCircle = 370
                 }
 
@@ -442,10 +441,10 @@ angular.module('myApp').directive('bars', function() {
                     }, //The margins of the SVG
                     levels: 3, //How many levels or inner circles should there be drawn
                     maxValue: 100, //What is the value that the biggest circle will represent
-                    labelFactor: 1.25, //How much farther than the radius of the outer circle should the labels be placed
+                    labelFactor: 1.15, //How much farther than the radius of the outer circle should the labels be placed
                     wrapWidth: 60, //The number of pixels after which a label needs to be given a new line
                     opacityArea: 0.35, //The opacity of the area of the blob
-                    dotRadius: 3, //The size of the colored circles of each blog
+                    dotRadius: 5, //The size of the colored circles of each blog
                     opacityCircles: 0.1, //The opacity of the circles of each blob
                     strokeWidth: 2, //The width of the stroke around each blob
                     roundStrokes: false, //If true the area and stroke will follow a round path (cardinal-closed)
@@ -602,35 +601,36 @@ angular.module('myApp').directive('bars', function() {
                 var blobCircleWrapper = g.selectAll(".radarCircleWrapper").data(data).enter().append("g").attr("class", "radarCircleWrapper");
 
                 //Append a set of invisible circles on top for the mouseover pop-up
-                // blobCircleWrapper.selectAll(".radarInvisibleCircle")
-                // 	.data(function(d,i) { return d; })
-                // 	.enter().append("circle")
-                // 	.attr("class", "radarInvisibleCircle")
-                // 	.attr("r", chart.dotRadius*1.5)
-                // 	.attr("cx", function(d,i){ return rScale(d.value) * Math.cos(angleSlice*i - Math.PI/2); })
-                // 	.attr("cy", function(d,i){ return rScale(d.value) * Math.sin(angleSlice*i - Math.PI/2); })
-                // 	.style("fill", "none")
-                // 	.style("pointer-events", "all")
-                // 	.on("mouseover", function(d,i) {
-                // 		newX =  parseFloat(d3.select(this).attr('cx')) - 10;
-                // 		newY =  parseFloat(d3.select(this).attr('cy')) - 10;
+                blobCircleWrapper.selectAll(".radarInvisibleCircle")
+                	.data(function(d,i) { return d; })
+                	.enter().append("circle")
+                	.attr("class", "radarInvisibleCircle")
+                	.attr("r", chart.dotRadius*1.5)
+                	.attr("cx", function(d,i){ return rScale(d.value) * Math.cos(angleSlice*i - Math.PI/2); })
+                	.attr("cy", function(d,i){ return rScale(d.value) * Math.sin(angleSlice*i - Math.PI/2); })
+                	.style("fill", "none")
+                	.style("pointer-events", "all")
+                	.on("mouseover", function(d,i) {
+                		newX =  parseFloat(d3.select(this).attr('cx')) - 10;
+                		newY =  parseFloat(d3.select(this).attr('cy')) - 10;
                 //
-                // 		tooltip
-                // 			.attr('x', newX)
-                // 			.attr('y', newY)
-                // 			.text(Format(d.value))
-                // 			.transition().duration(200)
-                // 			.style('opacity', 1);
-                // 	})
-                // 	.on("mouseout", function(){
-                // 		tooltip.transition().duration(200)
-                // 			.style("opacity", 0);
-                // 	});
+                		tooltip
+                			.attr('x', newX)
+                			.attr('y', newY)
+                			.text(Format(d.value))
+                			.transition().duration(200)
+                			.style('opacity', 1)
+                      .style("fill", "#737373");
+                	})
+                	.on("mouseout", function(){
+                		tooltip.transition().duration(200)
+                			.style("opacity", 0);
+                	});
 
                 //Set up the small tooltip for when you hover over a circle
-                // var tooltip = g.append("text")
-                // 	.attr("class", "tooltip")
-                // 	.style("opacity", 0);
+                var tooltip = g.append("text")
+                	.attr("class", "tooltip")
+                	.style("opacity", 0);
 
                 /////////////////////////////////////////////////////////
                 /////////////////// Helper Function /////////////////////
