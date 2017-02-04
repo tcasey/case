@@ -1154,7 +1154,7 @@ svg-left:hover > svg {
   flex: 1 0 25%; }
 
 .social-media-list svg {
-  fill: #000; }
+  fill: #737373; }
 
 .social-media-list svg.hover_effect,
 .social-media-list svg:active,
@@ -1189,9 +1189,21 @@ svg-left:hover > svg {
     min-height: 78vh;
     padding: 100px; } }
 
-@media (min-width: 750px) {
+@media (min-width: 750px) and (max-width: 1200px) {
   .waka--content {
     min-height: 76vh; } }
+
+@media (max-width: 750px) {
+  .waka--content {
+    min-height: 68vh; } }
+
+@media (min-width: 1200px) {
+  .waka--content {
+    min-height: 80vh; }
+  #home {
+    min-height: 81vh; }
+  .bio--content {
+    min-height: 82vh; } }
 
 /*@media (min-width: 750px) {
   .home {

@@ -31,7 +31,7 @@ angular.module('myApp', ['ui.router', 'sap.imageloader'])
  })
  .state('skills',{
 		 url: '/skills',
-		 templateUrl: 'html/templates/skillset.html',
+		 templateUrl: 'html/templates/skills.html',
      onEnter: scrollContent
  })
 
@@ -358,7 +358,7 @@ angular.module('myApp').directive('bars', function() {
                 h: height,
                 margin: margin,
                 maxValue: 0.5,
-                levels: 4,
+                levels: 5,
                 roundStrokes: true,
                 color: color
             };
@@ -375,13 +375,13 @@ angular.module('myApp').directive('bars', function() {
                 [
                     {
                         axis: "Angular",
-                        value: 0.80
+                        value: 0.83
                     }, {
                         axis: "React Native",
-                        value: 0.5
+                        value: 0.54
                     }, {
-                        axis: "CSS3",
-                        value: 0.9
+                        axis: "JavaScript",
+                        value: 0.82
                     }, {
                         axis: "D3",
                         value: 0.68
@@ -395,14 +395,14 @@ angular.module('myApp').directive('bars', function() {
                         axis: "React",
                         value: 0.74
                     }, {
-                        axis: "JavaScript",
-                        value: 0.80
+                        axis: "CSS3",
+                        value: 0.88
                     }, {
                         axis: "Express",
                         value: 0.65
                     }, {
                         axis: "UX/UI",
-                        value: 0.9
+                        value: 0.91
                     }
                 ]
             ];
@@ -415,19 +415,26 @@ angular.module('myApp').directive('bars', function() {
                     ipad    = window.matchMedia("(min-width: 600px) and (max-width: 800px)")
 
                 var innerCircle
+                var fontSize
 
                 if (i5.matches) {
                     innerCircle = 175
+                    fontSize = '11px'
                 } else if (i6.matches) {
                     innerCircle = 200
+                    fontSize = '11px'
                 } else if (i6plus.matches) {
                     innerCircle = 250
+                    fontSize = '12px'
                 } else if (phablet.matches) {
                     innerCircle = 300
+                    fontSize = '12px'
                 } else if (ipad.matches) {
                     innerCircle = 370
+                    fontSize = '12px'
                 } else {
                     innerCircle = 370
+                    fontSize = '12px'
                 }
 
                 var chart = {
@@ -441,12 +448,12 @@ angular.module('myApp').directive('bars', function() {
                     }, //The margins of the SVG
                     levels: 3, //How many levels or inner circles should there be drawn
                     maxValue: 100, //What is the value that the biggest circle will represent
-                    labelFactor: 1.15, //How much farther than the radius of the outer circle should the labels be placed
+                    labelFactor: 1.23, //How much farther than the radius of the outer circle should the labels be placed
                     wrapWidth: 60, //The number of pixels after which a label needs to be given a new line
                     opacityArea: 0.35, //The opacity of the area of the blob
-                    dotRadius: 5, //The size of the colored circles of each blog
+                    dotRadius: 3, //The size of the colored circles of each blog
                     opacityCircles: 0.1, //The opacity of the circles of each blob
-                    strokeWidth: 2, //The width of the stroke around each blob
+                    strokeWidth: 1, //The width of the stroke around each blob
                     roundStrokes: false, //If true the area and stroke will follow a round path (cardinal-closed)
                     color: d3.scale.category10() //Color function
                 };
@@ -516,7 +523,7 @@ angular.module('myApp').directive('bars', function() {
                 //Text indicating at what % each level is
                 axisGrid.selectAll(".axisLabel").data(d3.range(1, (chart.levels + 1)).reverse()).enter().append("text").attr("class", "axisLabel").attr("x", 4).attr("y", function(d) {
                     return -d * radius / chart.levels;
-                }).attr("dy", "0.4em").style("font-size", "10px").attr("fill", "#737373").text(function(d, i) {
+                }).attr("dy", "0.4em").style("font-size", fontSize).attr("fill", "#737373").text(function(d, i) {
                     return Format(maxValue * d / chart.levels);
                 });
 
@@ -531,10 +538,10 @@ angular.module('myApp').directive('bars', function() {
                     return rScale(maxValue * 1.1) * Math.cos(angleSlice * i - Math.PI / 2);
                 }).attr("y2", function(d, i) {
                     return rScale(maxValue * 1.1) * Math.sin(angleSlice * i - Math.PI / 2);
-                }).attr("class", "line").style("stroke", "white").style("stroke-width", "2px");
+                }).attr("class", "line").style("stroke", "#fafafa").style("stroke-width", "2px");
 
                 //Append the labels at each axis
-                axis.append("text").attr("class", "legend").style("font-size", "11px").attr("text-anchor", "middle").attr("dy", "0.35em").attr("x", function(d, i) {
+                axis.append("text").attr("class", "legend").style("font-size", fontSize).style("fill", "#737373").attr("text-anchor", "middle").attr("dy", "0.35em").attr("x", function(d, i) {
                     return rScale(maxValue * chart.labelFactor) * Math.cos(angleSlice * i - Math.PI / 2);
                 }).attr("y", function(d, i) {
                     return rScale(maxValue * chart.labelFactor) * Math.sin(angleSlice * i - Math.PI / 2);

@@ -31,7 +31,7 @@ angular.module('myApp', ['ui.router', 'sap.imageloader'])
  })
  .state('skills',{
 		 url: '/skills',
-		 templateUrl: 'html/templates/skillset.html',
+		 templateUrl: 'html/templates/skills.html',
      onEnter: scrollContent
  })
 
