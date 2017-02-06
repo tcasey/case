@@ -2,6 +2,5 @@
 
 ## TODO
 
-  - Add react projects
-  - Redo Skills page with D3 Charts
-  - Connect Server for rendering and CORS calls
+  [] Connect Server for rendering and CORS calls
+  [] Host on Digital Ocean or Now
