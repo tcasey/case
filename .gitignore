@@ -1,2 +1,4 @@
 node_modules
-wakaService.js
+keys.js
+.DS_Store
+server

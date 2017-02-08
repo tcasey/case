@@ -1,6 +1,6 @@
 angular.module('myApp').directive('bars', function() {
     return {
-        controller: 'wakaCtrl',
+        controller: 'radarCtrl',
         restrict: 'EA',
         replace: true,
         template: '<div id="main"></div>',

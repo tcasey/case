@@ -28,7 +28,10 @@ gulp.task('javascript', function() {
 });
 
 gulp.task('vendor', function() {
-  return gulp.src(['./node_modules/image-loader-angular/js/image-loader.js'])
+  return gulp.src([
+    './node_modules/image-loader-angular/js/image-loader.js',
+    './node_modules/angular-contentful/dist/angular-contentful.min.js'
+  ])
     .pipe(ngAnnotate())
     // .pipe(uglify())
     .pipe(concat('vendor.js'))

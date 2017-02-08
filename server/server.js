@@ -1,15 +1,15 @@
-var express = require('express');
-var cors = require('cors');
-var bodyParser = require('body-parser');
-var chart = require('chart.js');
-var autotrack = require('autotrack.js');
+var express = require('express'),
+    cors = require('cors'),
+    bodyParser = require('body-parser'),
+    contentful = require('./controllers/contentful.js'),
+    keys = require('./keys');
 
 var app = express();
 var port = 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
-
+app.use(express.static(__dirname + './../docs'));
 
 
 

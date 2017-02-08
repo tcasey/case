@@ -1,9 +1,12 @@
-angular.module('myApp', ['ui.router', 'sap.imageloader'])
+angular.module('myApp', ['ui.router', 'sap.imageloader', 'contentful'])
 
-.config(function($urlRouterProvider, $stateProvider, $locationProvider, $httpProvider){
-
+.config(function($urlRouterProvider, $stateProvider, $locationProvider, $httpProvider, contentfulProvider){
+  contentfulProvider.setOptions({
+    space: keys.space,
+    accessToken: keys.yoda
+  })
   //Enable cross domain calls
-   $httpProvider.defaults.useXDomain = true;
+  //  $httpProvider.defaults.useXDomain = true;
 
   var scrollContent = function() {
      window.scrollTo(0, 0);
@@ -116,10 +119,10 @@ angular.module('myApp', ['ui.router', 'sap.imageloader'])
     onEnter: scrollContent
  })
 
- .state('waka',{
-		 url: '/waka',
-		 templateUrl: 'html/templates/waka.html',
-		 controller: 'wakaCtrl',
+ .state('blog',{
+		 url: '/blog',
+		 templateUrl: 'html/templates/blog.html',
+		 controller: 'blogCtrl',
      onEnter: scrollContent
  })
 

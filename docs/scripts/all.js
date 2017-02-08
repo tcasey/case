@@ -1,9 +1,12 @@
-angular.module('myApp', ['ui.router', 'sap.imageloader'])
+angular.module('myApp', ['ui.router', 'sap.imageloader', 'contentful'])
 
-.config(["$urlRouterProvider", "$stateProvider", "$locationProvider", "$httpProvider", function($urlRouterProvider, $stateProvider, $locationProvider, $httpProvider){
-
+.config(["$urlRouterProvider", "$stateProvider", "$locationProvider", "$httpProvider", "contentfulProvider", function($urlRouterProvider, $stateProvider, $locationProvider, $httpProvider, contentfulProvider){
+  contentfulProvider.setOptions({
+    space: keys.space,
+    accessToken: keys.yoda
+  })
   //Enable cross domain calls
-   $httpProvider.defaults.useXDomain = true;
+  //  $httpProvider.defaults.useXDomain = true;
 
   var scrollContent = function() {
      window.scrollTo(0, 0);
@@ -116,15 +119,55 @@ angular.module('myApp', ['ui.router', 'sap.imageloader'])
     onEnter: scrollContent
  })
 
- .state('waka',{
-		 url: '/waka',
-		 templateUrl: 'html/templates/waka.html',
-		 controller: 'wakaCtrl',
+ .state('blog',{
+		 url: '/blog',
+		 templateUrl: 'html/templates/blog.html',
+		 controller: 'blogCtrl',
      onEnter: scrollContent
  })
 
 	//  $locationProvider.html5Mode(true);
 }]);
+
+angular.module('myApp')
+  .controller('blogCtrl', ["$scope", "contentful", function($scope, contentful) {
+
+    contentful
+     .entries()
+     .then(
+
+       // Success handler
+       function(response){
+         var entries = response.data.items;
+         console.log(entries);
+       },
+
+       // Error handler
+       function(response){
+         console.log('Oops, error ' + response.status);
+       }
+     );
+
+  }]);
+
+angular.module('myApp')
+  .service('blogService', ["$http", function($http){
+
+    // var client = contentful.createClient({
+    //   // This is the space ID. A space is like a project folder in Contentful terms
+    //   space: 'z1zljnmc67el',
+    //   // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
+    //   accessToken: '3852f534784cf1c3055396622959a602b6c70638529b9a7a2cd2913e75f08ced'
+    // })
+    // client.getEntry()
+    // .then(function (entry) {
+    //   console.log('Entry:', entry)
+    // })
+    // client.space().then(
+    //   function(space) { console.log(space)}
+    //   function(error) { console.log(error)}
+    // )
+  }]);
 
 angular.module('myApp')
   .directive('tcFooter', function() {
@@ -335,9 +378,14 @@ angular.module('myApp')
     }
   })
 
+angular.module('myApp')
+  .controller('radarCtrl', ["$scope", function($scope) {
+
+  }]);
+
 angular.module('myApp').directive('bars', function() {
     return {
-        controller: 'wakaCtrl',
+        controller: 'radarCtrl',
         restrict: 'EA',
         replace: true,
         template: '<div id="main"></div>',
@@ -698,38 +746,6 @@ angular.module('myApp')
 
     };
   });
-
-angular.module('myApp')
-  .controller('wakaCtrl', ["$scope", "wakaService", function($scope, wakaService) {
-
-    // wakaService.getWaka().then( function(waka) {
-    //   $scope.waka = waka;
-    // });
-
-
-  }]);
-
-angular.module('myApp')
-  .service('wakaService', ["$http", function($http){
-
-  // var key = '1183f7db-a10f-465e-863c-ac6518941a6f'
-  // var baseUrl = 'https://wakatime.com/api/v1/users/current/stats/last_7_days?api_key=' + key;
-  //
-  //   this.getWaka = function() {
-  //     return $http({
-  //       method: 'GET',
-  //       url: baseUrl,
-  //       headers: {
-  //           'Content-Type': 'application/json; charset=utf-8'
-  //       }
-  //     })
-  //     .then(function (response) {
-  //       console.log(response);
-  //       return response.data;
-  //     });
-  //   };
-
-  }]);
 
 angular.module('myApp')
   .directive('svgBike', function() {
