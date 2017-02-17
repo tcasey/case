@@ -4,8 +4,9 @@ angular.module('myApp')
       restrict: 'E',
       templateUrl: 'html/templates/header.html',
       scope: {
-        text: "@"
+        info: '=',
+        text: "@",
+        whatever: "@"
       }
-
     };
   });

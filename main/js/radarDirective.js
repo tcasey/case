@@ -70,34 +70,34 @@ angular.module('myApp').directive('bars', function() {
                 ]
             ];
             function RadarChart(id, data, options) {
-                let size    = window.innerWidth,
+                var size    = window.innerWidth,
                     i5      = window.matchMedia("(max-width: 360px)"),
                     i6      = window.matchMedia("(min-width: 360px) and (max-width: 390px)"),
                     i6plus  = window.matchMedia("(min-width: 390px) and (max-width: 430px)"),
                     phablet = window.matchMedia("(min-width: 430px) and (max-width: 600px)"),
-                    ipad    = window.matchMedia("(min-width: 600px) and (max-width: 800px)")
+                    ipad    = window.matchMedia("(min-width: 600px) and (max-width: 800px)");
 
-                var innerCircle
-                var fontSize
+                var innerCircle;
+                var fontSize;
 
                 if (i5.matches) {
-                    innerCircle = 175
-                    fontSize = '11px'
+                    innerCircle = 175;
+                    fontSize = '11px';
                 } else if (i6.matches) {
-                    innerCircle = 200
-                    fontSize = '11px'
+                    innerCircle = 200;
+                    fontSize = '11px';
                 } else if (i6plus.matches) {
-                    innerCircle = 250
-                    fontSize = '12px'
+                    innerCircle = 250;
+                    fontSize = '12px';
                 } else if (phablet.matches) {
-                    innerCircle = 300
-                    fontSize = '12px'
+                    innerCircle = 300;
+                    fontSize = '12px';
                 } else if (ipad.matches) {
-                    innerCircle = 370
-                    fontSize = '12px'
+                    innerCircle = 370;
+                    fontSize = '12px';
                 } else {
-                    innerCircle = 370
-                    fontSize = '12px'
+                    innerCircle = 370;
+                    fontSize = '12px';
                 }
 
                 var chart = {
@@ -134,11 +134,11 @@ angular.module('myApp').directive('bars', function() {
                 var maxValue = Math.max(chart.maxValue, d3.max(data, function(i) {
                     return d3.max(i.map(function(o) {
                         return o.value;
-                    }))
+                    }));
                 }));
 
                 var allAxis = (data[0].map(function(i, j) {
-                        return i.axis
+                        return i.axis;
                     })), //Names of each axis
                     total = allAxis.length, //The number of different axes
                     radius = Math.min(chart.w / 2, chart.h / 2), //Radius of the outermost circle
@@ -209,7 +209,7 @@ angular.module('myApp').directive('bars', function() {
                 }).attr("y", function(d, i) {
                     return rScale(maxValue * chart.labelFactor) * Math.sin(angleSlice * i - Math.PI / 2);
                 }).text(function(d) {
-                    return d
+                    return d;
                 }).call(wrap, chart.wrapWidth);
 
                 /////////////////////////////////////////////////////////

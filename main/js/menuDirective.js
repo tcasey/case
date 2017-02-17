@@ -9,5 +9,5 @@ angular.module('myApp')
         text: "@",
         whatever: "@"
       }
-    }
-  })
+    };
+  });

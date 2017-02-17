@@ -7,13 +7,5 @@ angular.module('myApp')
         text: "@"
       },
 
-      // link: function(scope, element, attrs) {
-      //   $('.menu-nav').mouseenter(function() {
-      //
-      //   })
-      //
-      //
-      // }
-
     };
   });

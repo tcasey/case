@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify'),
+    jshint = require('gulp-jshint'),
     plumber = require('gulp-plumber'),
     htmlmin = require('gulp-htmlmin'),
     uglifycss = require('gulp-uglifycss'),
@@ -30,26 +31,32 @@ gulp.task('styles', function() {
 
 gulp.task('javascript', function() {
   return gulp.src(['./main/**/*.js'])
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'))
     .pipe(ngAnnotate())
     .pipe(plumber())
     .pipe(concat('all.js'))
     .pipe(uglify())
     .pipe(rename({
       basename : 'all',
-      extname : '.min.css'
+      extname : '.min.js'
     }))
     .pipe(gulp.dest('./docs/scripts'))
 });
 
 gulp.task('vendor', function() {
-  return gulp.src(['./node_modules/image-loader-angular/js/image-loader.js'])
+  return gulp.src([
+    './node_modules/image-loader-angular/js/image-loader.js'
+  ])
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'))
     .pipe(ngAnnotate())
     .pipe(plumber())
     .pipe(concat('vendor.js'))
     .pipe(uglify())
     .pipe(rename({
       basename : 'vendor',
-      extname : '.min.css'
+      extname : '.min.js'
     }))
     .pipe(gulp.dest('./docs/scripts'))
 });
