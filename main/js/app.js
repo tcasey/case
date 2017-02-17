@@ -121,7 +121,7 @@ angular.module('myApp', ['ui.router', 'sap.imageloader'])
 		 templateUrl: 'html/templates/waka.html',
 		 controller: 'wakaCtrl',
      onEnter: scrollContent
- })
+ });
 
 	//  $locationProvider.html5Mode(true);
 });

@@ -36,7 +36,7 @@ gulp.task('javascript', function() {
     .pipe(ngAnnotate())
     .pipe(plumber())
     .pipe(concat('all.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(rename({
       basename : 'all',
       extname : '.min.js'
