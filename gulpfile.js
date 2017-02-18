@@ -36,7 +36,7 @@ gulp.task('javascript', function() {
     .pipe(ngAnnotate())
     .pipe(plumber())
     .pipe(concat('all.js'))
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(rename({
       basename : 'all',
       extname : '.min.js'
@@ -46,10 +46,13 @@ gulp.task('javascript', function() {
 
 gulp.task('vendor', function() {
   return gulp.src([
+    // './bower_components/angular/angular.js',
+    // './bower_components/angular-ui-router/release/angular-ui-router.js',
+    // './bower_components/jquery/dist/jquery.js',
     './node_modules/image-loader-angular/js/image-loader.js'
   ])
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'))
+    // .pipe(jshint())
+    // .pipe(jshint.reporter('default'))
     .pipe(ngAnnotate())
     .pipe(plumber())
     .pipe(concat('vendor.js'))
