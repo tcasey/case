@@ -385,9 +385,16 @@ svg-left:hover > svg {
     text-align: center;
 }
 
-.in-text-link strong {
+.employer {
+  // color: #8fb9ff;
+  color: inherit;
+  font-weight: bolder;
+  text-decoration: none;
+}
+.in-text-link a {
     color: #8fb9ff;
     font-weight: bolder;
+    text-decoration: none;
     cursor: pointer;
 }
 /*-----------------------------------
